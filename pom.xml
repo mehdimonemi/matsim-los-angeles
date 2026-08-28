@@ -160,6 +160,9 @@
 						<Xmaxwarns>4000</Xmaxwarns>
 						<Xmaxerrs>100</Xmaxerrs>
 					</compilerArguments>
+					        <excludes>
+								<exclude>org/matsim/prepare/CreateTransitScheduleAndVehiclesFromGTFS.java</exclude>
+							</excludes>
 				</configuration>
 			</plugin>
 			<plugin>
