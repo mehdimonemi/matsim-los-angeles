@@ -105,7 +105,9 @@ public class CharyparNagelLegScoringWithPersonSpecificMarginalUtilityOfMoney imp
 	protected double calcLegScore(final double departureTime, final double arrivalTime, final Leg leg) {
 		double tmpScore = 0.0;
 		double travelTime = arrivalTime - departureTime; // travel time in seconds	
-		ModeUtilityParameters modeParams = this.params.modeParams.get(leg.getMode());
+		String scoringMode = (String) leg.getAttributes().getAttribute("scoringMode");
+		String effectiveMode = scoringMode == null ? leg.getMode() : scoringMode;
+		ModeUtilityParameters modeParams = this.params.modeParams.get(effectiveMode);
 		if (modeParams == null) {
 			if (leg.getMode().equals(TransportMode.transit_walk) || leg.getMode().equals(TransportMode.non_network_walk )) {
 				modeParams = this.params.modeParams.get(TransportMode.walk);
@@ -137,9 +139,9 @@ public class CharyparNagelLegScoringWithPersonSpecificMarginalUtilityOfMoney imp
 		// (yy NOTE: the constant is added for _every_ pt leg.  This is not how such models are estimated.  kai, nov'12)
 		
 		// account for the daily constants
-		if (!modesAlreadyConsideredForDailyConstants.contains(leg.getMode())) {
+		if (!modesAlreadyConsideredForDailyConstants.contains(effectiveMode)) {
 			tmpScore += modeParams.dailyUtilityConstant + modeParams.dailyMoneyConstant * this.marginalUtilityOfMoney;
-			modesAlreadyConsideredForDailyConstants.add(leg.getMode());
+			modesAlreadyConsideredForDailyConstants.add(effectiveMode);
 		}
 		// yyyy the above will cause problems if we ever decide to differentiate pt mode into bus, tram, train, ...
 		// Might have to move the MainModeIdentifier then.  kai, sep'18

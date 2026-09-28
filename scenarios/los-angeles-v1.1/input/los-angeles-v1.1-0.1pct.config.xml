@@ -6,7 +6,7 @@
 		<param name="mutationAffectsDuration" value="true" />
 	</module>
 	<module name="controler" >
-		<param name="lastIteration" value="1" />
+		<param name="lastIteration" value="300" />
 		<param name="overwriteFiles" value="deleteDirectoryIfExists" />
 		<param name="runId" value="los-angeles-v1.1-0.1pct_run0" />
 		<param name="outputDirectory" value="./scenarios/los-angeles-v1.1/output/los-angeles-v1.1-0.1pct_run0/" />
