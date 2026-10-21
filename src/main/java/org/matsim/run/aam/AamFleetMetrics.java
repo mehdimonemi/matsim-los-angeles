@@ -79,6 +79,15 @@ public final class AamFleetMetrics implements BasicEventHandler,IterationEndsLis
     public void write(int iteration)throws IOException{
         Path root=Paths.get(scenario.getConfig().controler().getOutputDirectory(),"aam_metrics");
         Path dir=root.resolve("iteration_"+iteration);Files.createDirectories(dir);
+        AamCandidateScreen screen=AamCandidateScreen.get(scenario);
+        Path choiceDir=Paths.get(scenario.getConfig().controler().getOutputDirectory(),"aam-choice-set","iteration-"+iteration);
+        screen.write(choiceDir,false);
+        Map<String,Long> funnel=planFunnel(scenario);
+        funnel.put("requestsSubmitted",(long)requests.size());funnel.put("boardings",requests.values().stream().filter(r->Double.isFinite(r.pickup)).count());
+        funnel.put("completedRequests",requests.values().stream().filter(r->Double.isFinite(r.dropoff)).count());
+        funnel.put("completedAamUsers",requests.values().stream().filter(r->Double.isFinite(r.dropoff)).map(r->r.person).distinct().count());
+        funnel.put("rejectedRequests",requests.values().stream().filter(r->r.rejected).count());
+        try(PrintWriter w=writer(choiceDir,"funnel.csv")){w.println("metric,value");funnel.forEach((k,v)->w.println(k+","+v));}
         try(PrintWriter w=writer(dir,"requests.csv")){
             w.println("iteration,mode,request,person,vehicle,from_link,to_link,submitted_s,pickup_s,dropoff_s,wait_s,in_vehicle_s,direct_distance_m,direct_time_s,fare_usd,rejected,rejection_cause,hh_income_usd,hh_size,age,gender");
             for(R r:requests.values()){
@@ -118,6 +127,34 @@ public final class AamFleetMetrics implements BasicEventHandler,IterationEndsLis
             Files.copy(dir.resolve("fleet_metrics.csv"),root.resolve("final_fleet_metrics.csv"),StandardCopyOption.REPLACE_EXISTING);
             Files.writeString(root.resolve("COMPLETED.txt"),"Iteration "+iteration+" completed. All metrics derived from actual events.\n");
         }
+    }
+    public static Map<String,Long> planFunnel(Scenario scenario){
+        Map<String,Long> funnel=new LinkedHashMap<>(AamCandidateScreen.get(scenario).metrics());
+        long genuineUsers=0,selectedUsers=0,scoredUsers=0,alternatives=0,markers=0,fallbacks=0,singles=0,paired=0;
+        Map<String,Long> directions=new TreeMap<>();
+        for(Person person:scenario.getPopulation().getPersons().values()){
+            if(!"person".equals(person.getAttributes().getAttribute("subpopulation")))continue;
+            boolean genuine=false,scored=false;
+            for(org.matsim.api.core.v01.population.Plan plan:person.getPlans()){
+                boolean air=AamFeederPolicy.hasGenuineAam(plan);
+                if(air){genuine=true;scored|=plan.getScore()!=null&&Double.isFinite(plan.getScore());alternatives++;
+                    if("paired_tour".equals(plan.getAttributes().getAttribute("aam_alternative_kind")))paired++;else singles++;
+                    for(org.matsim.core.router.TripStructureUtils.Trip trip:org.matsim.core.router.TripStructureUtils.getTrips(plan))
+                        if(trip.getLegsOnly().stream().anyMatch(l->AIR.equals(l.getMode())))directions.merge(AamCandidateScreen.direction(trip),1L,Long::sum);
+                }else{
+                    if(AamFeederPolicy.hasAamMarker(plan))markers++;
+                    if(Boolean.TRUE.equals(plan.getAttributes().getAttribute("aam_ground_fallback"))||AamFeederPolicy.hasAamMarker(plan)&&plan.getPlanElements().stream().noneMatch(e->e instanceof org.matsim.api.core.v01.population.Leg&&AAM.equals(((org.matsim.api.core.v01.population.Leg)e).getMode())))fallbacks++;
+                }
+            }
+            if(genuine)genuineUsers++;if(scored)scoredUsers++;
+            if(AamFeederPolicy.hasGenuineAam(person.getSelectedPlan()))selectedUsers++;
+        }
+        funnel.put("passengersCurrentlyRoutedFeasible",genuineUsers);funnel.put("passengersWithGenuineAamAlternatives",genuineUsers);
+        funnel.put("genuineRoutedAamAlternatives",alternatives);funnel.put("selectedAamUsers",selectedUsers);funnel.put("scoredAamAlternativeUsers",scoredUsers);
+        funnel.put("markerOnlyPlans",markers);funnel.put("groundFallbackPlans",fallbacks);funnel.put("singleTripAlternatives",singles);funnel.put("pairedTourAlternatives",paired);
+        directions.forEach((k,v)->funnel.put("direction_"+k,v));
+        for(String key:List.of("requestsSubmitted","boardings","completedRequests","completedAamUsers","rejectedRequests"))funnel.put(key,0L);
+        return funnel;
     }
     private static PrintWriter writer(Path p,String f)throws IOException{return new PrintWriter(Files.newBufferedWriter(p.resolve(f)));}
     private static String attr(Person p,String k){return p==null?"":Objects.toString(p.getAttributes().getAttribute(k),"");}

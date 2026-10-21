@@ -1,0 +1,18 @@
+{
+  "status": "PASS_STATIC_VALIDATION",
+  "matSimStarted": false,
+  "totalSimulatedPersons": 19123,
+  "objectiveTravelers": 18659,
+  "subpopulations": {
+    "person": 18659,
+    "freight": 464
+  },
+  "candidates": 100,
+  "initialSites": 10,
+  "filesFingerprinted": 289,
+  "warning": "Static file/cohort/bytecode validation is not MATSim startup validation, production calibration, or four-method integration. Full coverage means 901 estimator simulations + 5 or 10 validation simulations per stage per service; enormous compute. A cap prevents complete-coverage convergence claims.",
+  "probeLayoutsPerStage": 901,
+  "fullNeighborhoodLayouts": 901,
+  "evaluationIterationsPerTrial": 50,
+  "maximumStages": 20
+}

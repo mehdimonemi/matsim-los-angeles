@@ -167,7 +167,9 @@ public class CharyparNagelLegScoringWithPersonSpecificMarginalUtilityOfMoney imp
 			}
 			this.nextEnterVehicleIsFirstOfTrip = false ;
 			// add score of waiting, _minus_ score of travelling (since it is added in the legscoring above):
-			this.score += (event.getTime() - this.lastActivityEndTime.seconds()) * (this.params.marginalUtilityOfWaitingPt_s - this.params.modeParams.get(TransportMode.pt).marginalUtilityOfTraveling_s) ;
+			String boardedMode=((PersonEntersVehicleEvent)event).getVehicleId().toString().startsWith("aam_sched_vehicle_")
+					&& this.params.modeParams.containsKey("scheduled_aam") ? "scheduled_aam" : TransportMode.pt;
+			this.score += (event.getTime() - this.lastActivityEndTime.seconds()) * (this.params.marginalUtilityOfWaitingPt_s - this.params.modeParams.get(boardedMode).marginalUtilityOfTraveling_s) ;
 		}
 
 		if ( event instanceof PersonDepartureEvent ) {

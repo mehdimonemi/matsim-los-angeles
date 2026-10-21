@@ -1,0 +1,45 @@
+{
+  "objective": "mean approximate AAM generalized minutes (lower is better)",
+  "population": "run-inputs\\los-angeles-v1.0-population-0.1pct_2019-12-09.xml.gz",
+  "candidates": "scenarios\\aam\\vertiport-candidates-100.csv",
+  "tripCount": 39297,
+  "sha256": "d0d62352821ebe79b244ef953dc9ea82db478aa21e9e149ce8de753e566f1843",
+  "iterations": [
+    {
+      "swap": 0,
+      "meanGeneralizedMinutes": 224.14322367575863,
+      "originCoveredTrips": 6527,
+      "activeIds": [
+        "VP01",
+        "VP02",
+        "VP03",
+        "VP04",
+        "VP05",
+        "VP06",
+        "VP07",
+        "VP08",
+        "VP09",
+        "VP10"
+      ]
+    },
+    {
+      "swap": 1,
+      "removed": "VP01",
+      "added": "CAN084",
+      "meanGeneralizedMinutes": 206.78670242953888,
+      "originCoveredTrips": 9610,
+      "activeIds": [
+        "CAN084",
+        "VP02",
+        "VP03",
+        "VP04",
+        "VP05",
+        "VP06",
+        "VP07",
+        "VP08",
+        "VP09",
+        "VP10"
+      ]
+    }
+  ]
+}

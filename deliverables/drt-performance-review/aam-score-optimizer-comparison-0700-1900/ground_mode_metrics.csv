@@ -1,0 +1,17 @@
+method,phase,mode,legs,minutes
+global,access,walk,4250,638461.1666666678
+global,egress,walk,4241,1225794.0333333306
+global,access,car,13,587.7333333333333
+global,egress,car,4,158.86666666666667
+all-vp-k10,access,walk,4515,800530.049999999
+all-vp-k10,egress,walk,4512,1359200.6500000008
+all-vp-k10,access,car,10,276.1166666666667
+all-vp-k10,egress,car,7,226.74999999999997
+one-vp-k10,access,walk,4248,862347.6999999989
+one-vp-k10,egress,walk,4244,1410346.3833333345
+one-vp-k10,access,car,8,316.76666666666665
+one-vp-k10,egress,car,4,117.58333333333333
+adaptive,access,walk,4488,898016.6000000003
+adaptive,egress,walk,4483,1408734.449999996
+adaptive,access,car,6,503.3166666666667
+adaptive,egress,car,1,38.31666666666667

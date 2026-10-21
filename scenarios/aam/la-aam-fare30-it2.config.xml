@@ -5,18 +5,37 @@
     <module name="aam">
         <param name="accessEgressModes" value="car,ride,ride_taxi,walk,bike" />
         <param name="candidateVertiports" value="3" />
+        <param name="maximumCandidateVertiportPairs" value="3" />
         <param name="drtMatrixCellSize" value="500" />
-        <param name="baseFare" value="30.0" />
+        <!-- Produced by the external optimizer and held fixed for the complete final run. -->
+        <param name="activeVertiportsFile" value="active-vertiports.csv" />
+        <param name="activeVertiportCount" value="10" />
+        <!-- The runner caps innovation at 1 - this value, guaranteeing a convergence tail. -->
+        <param name="minimumInnovationFreeFraction" value="0.20" />
+        <param name="baseFare" value="0.0" />
         <param name="farePerMile" value="2.0" />
-        <param name="expectedWaitTime" value="900.0" />
+        <!-- First-iteration fallback only; later alternatives use observed origin/destination/time-specific waits. -->
+        <param name="expectedWaitTime" value="120.0" />
+        <param name="waitTimeBin" value="3600.0" />
         <param name="maxWaitTime" value="900.0" />
+        <param name="maxAccessDistanceMiles" value="30.0" />
+        <param name="maxEgressDistanceMiles" value="30.0" />
+        <param name="serviceStartTime" value="25200.0" />
+        <param name="serviceEndTime" value="68400.0" />
+        <param name="allowPreServiceRequests" value="true" />
+        <param name="maximumRoutedCandidates" value="3" />
+        <param name="protectedAlternatives" value="3" />
+        <!-- Broad exploration; actual feeder costs and physical feasibility still apply. -->
+        <param name="minimumTripDistanceMiles" value="0.0" />
+        <param name="initialExplorationFraction" value="1.0" />
+        <param name="allowCarAtHomeAlternatives" value="true" />
     </module>
 	<module name="TimeAllocationMutator" >
 		<param name="mutationRange" value="7200.0" />
 		<param name="mutationAffectsDuration" value="true" />
 	</module>
 	<module name="controler" >
-		<param name="lastIteration" value="300" />
+		<param name="lastIteration" value="50" />
 		<param name="overwriteFiles" value="failIfDirectoryExists" />
 		<param name="runId" value="los-angeles-v1.1-0.1pct_run0" />
 		<param name="outputDirectory" value="../run-output/0.1pct-verification/" />
@@ -79,7 +98,6 @@
             <param name="strategyName" value="AamInnovation" />
             <param name="subpopulation" value="person" />
             <param name="weight" value="0.10" />
-            <param name="disableAfterIteration" value="1" />
         </parameterset>
 		<param name="fractionOfIterationsToDisableInnovation" value="0.8" />
 		<parameterset type="strategysettings" >

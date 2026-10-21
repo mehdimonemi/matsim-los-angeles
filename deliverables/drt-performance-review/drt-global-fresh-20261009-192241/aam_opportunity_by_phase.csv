@@ -1,0 +1,10 @@
+phase,end_plan_marker_users,end_plan_genuine_air_users,actual_aam_users_union,actual_aam_trips_sum
+stage-01,7132,4969,4863,11651
+stage-02,7132,4691,4640,11465
+stage-03,7249,4314,4263,10789
+stage-04,7279,3938,3716,9095
+stage-05,7528,3816,3776,9349
+stage-06,7695,3787,3715,9054
+stage-07,7779,3706,3651,8922
+stage-08,7812,3677,3579,8230
+final-convergence,7812,3935,3880,13187

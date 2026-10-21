@@ -12,11 +12,11 @@
 		<param name="seats" value="4" />
 		<!-- Generate explicit AAM-containing PT alternatives; normal scoring decides whether they survive. -->
 		<param name="innovationEnabled" value="true" />
-		<param name="minimumTripDistance" value="20000.0" />
-		<!-- Broad feasibility screen; scoring, rather than the router, rejects unattractive access. -->
-		<param name="maximumAccessEgressTime" value="10800.0" />
-		<param name="accessEgressSpeed" value="4.16667" />
-		<param name="accessEgressBeelineFactor" value="1.4" />
+		<!-- Match AAM DRT eligibility and multimodal feeder choice. -->
+		<param name="minimumTripDistance" value="4828.032" />
+		<param name="maximumGroundAccessDistanceMiles" value="5.0" />
+		<param name="candidateVertiports" value="3" />
+		<param name="accessEgressModes" value="car,ride,ride_taxi,walk,bike" />
 	</module>
 	<module name="TimeAllocationMutator" >
 		<param name="mutationRange" value="7200.0" />

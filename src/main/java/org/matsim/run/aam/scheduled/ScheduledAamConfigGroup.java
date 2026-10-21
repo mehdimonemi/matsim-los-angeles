@@ -1,5 +1,9 @@
 package org.matsim.run.aam.scheduled;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 import org.matsim.core.config.ReflectiveConfigGroup;
 
 /** Input settings for AAM operated as fixed-route, fixed-timetable public transit. */
@@ -14,10 +18,29 @@ public final class ScheduledAamConfigGroup extends ReflectiveConfigGroup {
     private double cruiseSpeed = 100 * 1609.344 / 3600;
     private int seats = 4;
     private boolean innovationEnabled = true;
-    private double minimumTripDistance = 20_000;
-    private double maximumAccessEgressTime = 45 * 60;
-    private double accessEgressSpeed = 4.16667;
-    private double accessEgressBeelineFactor = 1.4;
+    private boolean seedAlternativesAtStartup = true;
+    private double minimumTripDistance = 3 * 1609.344;
+    private String accessEgressModes = "car,ride,ride_taxi,walk,bike";
+    private int candidateVertiports = 3;
+    private double maximumGroundAccessDistanceMiles = 5;
+    private double maximumWalkDistance=1000, maximumWalkTime=1200, maximumPassengerWait=1800;
+    private String queuePriorsFile="";
+    private String frequencyAllocationFile="";
+    @StringGetter("frequencyAllocationFile") public String getFrequencyAllocationFile(){return frequencyAllocationFile;}
+    @StringSetter("frequencyAllocationFile") public void setFrequencyAllocationFile(String v){frequencyAllocationFile=v;}
+    @StringGetter("queuePriorsFile") public String getQueuePriorsFile(){return queuePriorsFile;}
+    @StringSetter("queuePriorsFile") public void setQueuePriorsFile(String v){queuePriorsFile=v;}
+    private double baseFare=30, farePerMile=2;
+    @StringGetter("maximumWalkDistance") public double getMaximumWalkDistance(){return maximumWalkDistance;}
+    @StringSetter("maximumWalkDistance") public void setMaximumWalkDistance(double v){maximumWalkDistance=nonnegative("maximumWalkDistance",v);}
+    @StringGetter("maximumWalkTime") public double getMaximumWalkTime(){return maximumWalkTime;}
+    @StringSetter("maximumWalkTime") public void setMaximumWalkTime(double v){maximumWalkTime=nonnegative("maximumWalkTime",v);}
+    @StringGetter("maximumPassengerWait") public double getMaximumPassengerWait(){return maximumPassengerWait;}
+    @StringSetter("maximumPassengerWait") public void setMaximumPassengerWait(double v){maximumPassengerWait=nonnegative("maximumPassengerWait",v);}
+    @StringGetter("baseFare") public double getBaseFare(){return baseFare;}
+    @StringSetter("baseFare") public void setBaseFare(double v){baseFare=nonnegative("baseFare",v);}
+    @StringGetter("farePerMile") public double getFarePerMile(){return farePerMile;}
+    @StringSetter("farePerMile") public void setFarePerMile(double v){farePerMile=nonnegative("farePerMile",v);}
 
     public ScheduledAamConfigGroup() {
         super(GROUP_NAME);
@@ -109,6 +132,12 @@ public final class ScheduledAamConfigGroup extends ReflectiveConfigGroup {
         innovationEnabled = value;
     }
 
+    @StringGetter("seedAlternativesAtStartup")
+    public boolean getSeedAlternativesAtStartup() { return seedAlternativesAtStartup; }
+
+    @StringSetter("seedAlternativesAtStartup")
+    public void setSeedAlternativesAtStartup(boolean value) { seedAlternativesAtStartup = value; }
+
     @StringGetter("minimumTripDistance")
     public double getMinimumTripDistance() {
         return minimumTripDistance;
@@ -119,34 +148,51 @@ public final class ScheduledAamConfigGroup extends ReflectiveConfigGroup {
         minimumTripDistance = nonnegative("minimumTripDistance", value);
     }
 
-    @StringGetter("maximumAccessEgressTime")
-    public double getMaximumAccessEgressTime() {
-        return maximumAccessEgressTime;
+    @StringGetter("accessEgressModes")
+    public String getAccessEgressModes() {
+        return accessEgressModes;
     }
 
-    @StringSetter("maximumAccessEgressTime")
-    public void setMaximumAccessEgressTime(double value) {
-        maximumAccessEgressTime = positive("maximumAccessEgressTime", value);
+    @StringSetter("accessEgressModes")
+    public void setAccessEgressModes(String value) {
+        Set<String> allowed = Set.of("car", "ride", "ride_taxi", "walk", "bike");
+        for (String mode : value.split(",")) {
+            if (!allowed.contains(mode.trim())) {
+                throw new IllegalArgumentException("Unsupported scheduled-AAM access/egress mode: " + mode);
+            }
+        }
+        accessEgressModes = value;
     }
 
-    @StringGetter("accessEgressSpeed")
-    public double getAccessEgressSpeed() {
-        return accessEgressSpeed;
+    public List<String> modes() {
+        List<String> result = new ArrayList<>();
+        for (String mode : accessEgressModes.split(",")) {
+            result.add(mode.trim());
+        }
+        return result;
     }
 
-    @StringSetter("accessEgressSpeed")
-    public void setAccessEgressSpeed(double value) {
-        accessEgressSpeed = positive("accessEgressSpeed", value);
+    @StringGetter("candidateVertiports")
+    public int getCandidateVertiports() {
+        return candidateVertiports;
     }
 
-    @StringGetter("accessEgressBeelineFactor")
-    public double getAccessEgressBeelineFactor() {
-        return accessEgressBeelineFactor;
+    @StringSetter("candidateVertiports")
+    public void setCandidateVertiports(int value) {
+        if (value < 1) {
+            throw new IllegalArgumentException("candidateVertiports must be positive");
+        }
+        candidateVertiports = value;
     }
 
-    @StringSetter("accessEgressBeelineFactor")
-    public void setAccessEgressBeelineFactor(double value) {
-        accessEgressBeelineFactor = positive("accessEgressBeelineFactor", value);
+    @StringGetter("maximumGroundAccessDistanceMiles")
+    public double getMaximumGroundAccessDistanceMiles() {
+        return maximumGroundAccessDistanceMiles;
+    }
+
+    @StringSetter("maximumGroundAccessDistanceMiles")
+    public void setMaximumGroundAccessDistanceMiles(double value) {
+        maximumGroundAccessDistanceMiles = nonnegative("maximumGroundAccessDistanceMiles", value);
     }
 
     private static double nonnegative(String name, double value) {

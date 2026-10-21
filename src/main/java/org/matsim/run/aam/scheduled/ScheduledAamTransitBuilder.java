@@ -48,6 +48,19 @@ public final class ScheduledAamTransitBuilder {
 
         URL input = ConfigGroup.getInputFileURL(scenario.getConfig().getContext(), config.getVertiportsFile());
         List<Vertiport> vertiports = readVertiports(input);
+        java.util.Map<String,Integer> frequencies=new java.util.HashMap<>();
+        if(!config.getFrequencyAllocationFile().isEmpty()){
+            URL allocation=ConfigGroup.getInputFileURL(scenario.getConfig().getContext(),config.getFrequencyAllocationFile());
+            try(BufferedReader reader=new BufferedReader(new InputStreamReader(allocation.openStream(),StandardCharsets.UTF_8))){
+                if(!"origin,destination,departures".equals(reader.readLine()))throw new IllegalArgumentException("Frequency CSV header must be origin,destination,departures");
+                String row;while((row=reader.readLine())!=null){String[] cells=row.split(",",-1);if(cells.length!=3)throw new IllegalArgumentException("Invalid frequency row: "+row);
+                    int count=Integer.parseInt(cells[2]);String key=cells[0]+"_"+cells[1];
+                    if(count<0||frequencies.put(key,count)!=null)throw new IllegalArgumentException("Negative/duplicate frequency: "+row);
+                }
+            }
+            java.util.Set<String> required=new java.util.HashSet<>();for(Vertiport o:vertiports)for(Vertiport d:vertiports)if(o!=d)required.add(o.id+"_"+d.id);
+            if(!frequencies.keySet().equals(required))throw new IllegalArgumentException("Frequency file must list exactly every active directed corridor, including zero allocations");
+        }
         if (vertiports.size() < 2) {
             throw new IllegalArgumentException("At least two vertiports are required: " + input);
         }
@@ -112,7 +125,15 @@ public final class ScheduledAamTransitBuilder {
                 route.setDescription("Scheduled AAM " + origin.name + " to " + destination.name);
 
                 int sequence = 0;
-                for (double time = config.getServiceStartTime(); time <= config.getServiceEndTime() + 1e-6; time += config.getHeadway()) {
+                List<Double> departureTimes=new ArrayList<>();
+                if(config.getFrequencyAllocationFile().isEmpty()){
+                    for(double time=config.getServiceStartTime();time<=config.getServiceEndTime()+1e-6;time+=config.getHeadway())departureTimes.add(time);
+                }else{
+                    int count=frequencies.get(pair);
+                    for(int index=0;index<count;index++)departureTimes.add(count==1?(config.getServiceStartTime()+config.getServiceEndTime())/2:
+                        config.getServiceStartTime()+index*(config.getServiceEndTime()-config.getServiceStartTime())/(count-1));
+                }
+                for (double time : departureTimes) {
                     String suffix = String.format(Locale.ROOT, "%04d", sequence++);
                     Id<Vehicle> vehicleId = Id.create(PREFIX + "vehicle_" + pair + "_" + suffix, Vehicle.class);
                     Vehicle aircraft = vehicles.getFactory().createVehicle(vehicleId, aircraftType);

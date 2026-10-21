@@ -139,12 +139,17 @@ public class RunLosAngelesScenario {
 	}
 	
 	public static Scenario prepareScenario( Config config ) {
+		return prepareScenario(config, false);
+	}
+
+	/** AAM stage restarts must retain competing plans; baseline behavior is unchanged. */
+	public static Scenario prepareScenario(Config config, boolean preserveAlternatives) {
 		Gbl.assertNotNull( config );
 		final Scenario scenario = ScenarioUtils.loadScenario( config );
 		
 		// make sure we start with selected plans only
 		for( Person person : scenario.getPopulation().getPersons().values() ){
-			person.getPlans().removeIf( (plan) -> plan!=person.getSelectedPlan() ) ;
+			if (!preserveAlternatives) person.getPlans().removeIf( (plan) -> plan!=person.getSelectedPlan() ) ;
 		}
 		
 		return scenario;
@@ -189,7 +194,9 @@ public class RunLosAngelesScenario {
 		config.qsim().setTrafficDynamics( TrafficDynamics.kinematicWaves );
 				
 		// activities:
-		for ( long ii = 600 ; ii <= 97200; ii+=600 ) {
+		// The full 100% population contains activity types beyond 27 hours
+		// (for example, home_99000). Cover the configured 36-hour QSim horizon.
+		for ( long ii = 600 ; ii <= 129600; ii+=600 ) {
 			config.planCalcScore().addActivityParams( new ActivityParams( "home_" + ii ).setTypicalDuration( ii ) );
 			config.planCalcScore().addActivityParams( new ActivityParams( "work_" + ii ).setTypicalDuration( ii ) );
 			config.planCalcScore().addActivityParams( new ActivityParams( "university_" + ii ).setTypicalDuration( ii ) );

@@ -34,8 +34,10 @@ def trips(path):
         return list(reader)
 
 
-def is_aam(row):
-    return bool({'aam','aam_drt'} & set(row.get('modes','').split('-'))) or row.get('longest_distance_mode') in ('aam','aam_drt')
+try:
+    from scripts.aam.score_optimizer.population import is_genuine_aam_trip as is_aam, operational_request_metrics
+except ModuleNotFoundError:
+    from score_optimizer.population import is_genuine_aam_trip as is_aam, operational_request_metrics
 
 
 def key(row): return row['person'],row['trip_number']
@@ -235,7 +237,8 @@ def fleet_outputs(out,source):
         fig,ax=plt.subplots(figsize=(8,4),layout='constrained');ax.hist([v/1000 for v in incomes.values()],bins=[0,25,50,75,100,150,200,300,500,1000],color='#765ca8',edgecolor='white')
         ax.set(title=f'Income of distinct served AAM users | iteration {final}',xlabel='Household income (thousand USD)',ylabel='Distinct users')
         fig.savefig(out/'aam_user_income.png',dpi=150);plt.close(fig)
-    return int(series[-1]['served'])
+    return dict(final_iteration_served_passenger_requests=int(series[-1]['served']),
+                **operational_request_metrics(tables.get((final,'requests'),[])))
 
 
 def main():
@@ -246,6 +249,7 @@ def main():
     current=trips(args.aam_trips);aam=[r for r in current if is_aam(r)]
     summary=dict(aam_trip_records=len(aam),distinct_aam_trip_users=len({r['person'] for r in aam}),
                  all_completed_trip_records=len(current),aam_completed_trip_share_pct=round(100*len(aam)/len(current),3) if current else 0)
+    summary['marker_only_trip_records']=sum(not is_aam(row) and (row.get('main_mode')=='aam' or row.get('longest_distance_mode')=='aam') for row in current)
     modes=Counter(r.get('longest_distance_mode') or 'unknown' for r in current)
     save_csv(out/'mode_counts.csv',[dict(mode=m,trips=n,share_pct=round(100*n/len(current),3)) for m,n in modes.most_common()],['mode','trips','share_pct'])
     if modes:chart(out/'aam_mode_share.png','Completed trips by longest-distance mode',*zip(*modes.most_common(10)),horizontal=True)
@@ -282,6 +286,11 @@ def main():
         ax.set_xticks(x,names,rotation=35,ha='right');ax.set_ylabel('Completed sample trips');ax.set_title('Completed trips by longest-distance mode: two scenarios');ax.legend()
         fig.savefig(out/'baseline_vs_aam_modes.png',dpi=150);plt.close(fig)
     if args.plans:
+        try:
+            from scripts.aam.score_optimizer.population import population_score_metrics
+        except ModuleNotFoundError:
+            from score_optimizer.population import population_score_metrics
+        summary.update(population_score_metrics(args.plans))
         access=plan_legs(args.plans,None)
         fields=['person','trip_number','access_mode','egress_mode','access_leg_count','egress_leg_count','access_modes','egress_modes','access_minutes_planned','egress_minutes_planned','flight_minutes_planned']
         save_csv(out/'aam_access_egress_planned.csv',access,fields)
@@ -292,7 +301,7 @@ def main():
         summary['aam_selected_plan_trips_with_access_egress']=len(access)
         summary['planned_aam_trips_with_repeated_nonwalk_ground_legs']=sum(any(sum(m not in ('walk','(none)') for m in r[f].split('+'))>1 for f in ('access_modes','egress_modes')) for r in access)
     if args.metrics:
-        summary['final_iteration_served_passenger_requests']=fleet_outputs(out,args.metrics)
+        summary.update(fleet_outputs(out,args.metrics))
     (out/'summary.json').write_text(json.dumps(summary,indent=2)+'\n',encoding='utf-8')
     (out/'INTERPRETATION.txt').write_text('Sample counts only. Completed trips, selected-plan trips, and served passenger requests are separate units. Baseline pairs require person/trip number and identical activity types and coordinates; differences are not controlled causal effects. Planned times come from selected plans. Compact planned sequences omit zero-time walk connectors. Passenger-sequence charts hide walks around substantive ground modes, retaining walk-only sides; raw sequences remain in aam_leg_mode_sequences.csv and aam_leg_mode_sequences_raw.png. Hiding connectors does not remove their time from trips.\n',encoding='utf-8')
     print(json.dumps(summary,indent=2));print('Saved outputs in',out)

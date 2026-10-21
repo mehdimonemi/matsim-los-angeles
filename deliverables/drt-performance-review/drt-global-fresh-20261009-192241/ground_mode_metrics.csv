@@ -1,0 +1,9 @@
+phase,mode,legs,minutes
+access,walk,862,791.5999999999983
+access,ride,352,3052.7666666666646
+egress,walk,881,683.083333333333
+egress,ride,429,9136.149999999992
+access,ride_taxi,68,446.04999999999984
+egress,ride_taxi,10,109.71666666666667
+access,car,1,32.0
+egress,car,1,29.433333333333334
