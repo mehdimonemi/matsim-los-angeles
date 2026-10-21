@@ -1,0 +1,204 @@
+{
+  "population": "run-output\\drt-global-fresh-20261009-192241\\stage-01-input.xml.gz",
+  "passengers": 18659,
+  "dailyTrips": 71126,
+  "layouts": 9,
+  "candidateSites": 100,
+  "xmlReadAndMatrixPrecomputeSeconds": 1.3436556999804452,
+  "directDistanceRecomputationSeconds": 0.1278374000103213,
+  "matrixLookupSeconds": 0.05782270000781864,
+  "unchangedLayoutReuseSeconds": 1.279998105019331e-05,
+  "distancesExactlyEquivalent": true,
+  "screening": [
+    {
+      "passengerAgentsEvaluated": 18659,
+      "totalTripsEvaluated": 71126,
+      "geometricallyEligibleTrips": 3149,
+      "temporallyEligibleTrips": 3118,
+      "passengersWithEligibleCandidate": 1644,
+      "unresolvedCandidates": 71126,
+      "screenedCandidatesForRouting": 2610,
+      "infeasibilityReasons": {
+        "missing_activity_coordinates": 0,
+        "minimum_trip_distance": 31829,
+        "access_distance": 29014,
+        "egress_distance": 5857,
+        "same_vertiport": 1277,
+        "service_window": 31,
+        "unrouted": 3118
+      },
+      "precomputeSeconds": 1.3436556999804452,
+      "layoutScreenSeconds": 0.15551930002402514,
+      "interpretation": "Screened eligibility is a candidate, not network feasibility or adoption."
+    },
+    {
+      "passengerAgentsEvaluated": 18659,
+      "totalTripsEvaluated": 71126,
+      "geometricallyEligibleTrips": 3984,
+      "temporallyEligibleTrips": 3936,
+      "passengersWithEligibleCandidate": 1978,
+      "unresolvedCandidates": 71126,
+      "screenedCandidatesForRouting": 3237,
+      "infeasibilityReasons": {
+        "missing_activity_coordinates": 0,
+        "minimum_trip_distance": 31829,
+        "access_distance": 25394,
+        "egress_distance": 6886,
+        "same_vertiport": 3033,
+        "service_window": 48,
+        "unrouted": 3936
+      },
+      "precomputeSeconds": 1.3436556999804452,
+      "layoutScreenSeconds": 0.1635338999913074,
+      "interpretation": "Screened eligibility is a candidate, not network feasibility or adoption."
+    },
+    {
+      "passengerAgentsEvaluated": 18659,
+      "totalTripsEvaluated": 71126,
+      "geometricallyEligibleTrips": 3716,
+      "temporallyEligibleTrips": 3672,
+      "passengersWithEligibleCandidate": 1825,
+      "unresolvedCandidates": 71126,
+      "screenedCandidatesForRouting": 3004,
+      "infeasibilityReasons": {
+        "missing_activity_coordinates": 0,
+        "minimum_trip_distance": 31829,
+        "access_distance": 26550,
+        "egress_distance": 6439,
+        "same_vertiport": 2592,
+        "service_window": 44,
+        "unrouted": 3672
+      },
+      "precomputeSeconds": 1.3436556999804452,
+      "layoutScreenSeconds": 0.14609769999515265,
+      "interpretation": "Screened eligibility is a candidate, not network feasibility or adoption."
+    },
+    {
+      "passengerAgentsEvaluated": 18659,
+      "totalTripsEvaluated": 71126,
+      "geometricallyEligibleTrips": 3738,
+      "temporallyEligibleTrips": 3690,
+      "passengersWithEligibleCandidate": 1800,
+      "unresolvedCandidates": 71126,
+      "screenedCandidatesForRouting": 2949,
+      "infeasibilityReasons": {
+        "missing_activity_coordinates": 0,
+        "minimum_trip_distance": 31829,
+        "access_distance": 27622,
+        "egress_distance": 6168,
+        "same_vertiport": 1769,
+        "service_window": 48,
+        "unrouted": 3690
+      },
+      "precomputeSeconds": 1.3436556999804452,
+      "layoutScreenSeconds": 0.129667800036259,
+      "interpretation": "Screened eligibility is a candidate, not network feasibility or adoption."
+    },
+    {
+      "passengerAgentsEvaluated": 18659,
+      "totalTripsEvaluated": 71126,
+      "geometricallyEligibleTrips": 3895,
+      "temporallyEligibleTrips": 3848,
+      "passengersWithEligibleCandidate": 1890,
+      "unresolvedCandidates": 71126,
+      "screenedCandidatesForRouting": 3068,
+      "infeasibilityReasons": {
+        "missing_activity_coordinates": 0,
+        "minimum_trip_distance": 31829,
+        "access_distance": 28961,
+        "egress_distance": 5578,
+        "same_vertiport": 863,
+        "service_window": 47,
+        "unrouted": 3848
+      },
+      "precomputeSeconds": 1.3436556999804452,
+      "layoutScreenSeconds": 0.12304739997489378,
+      "interpretation": "Screened eligibility is a candidate, not network feasibility or adoption."
+    },
+    {
+      "passengerAgentsEvaluated": 18659,
+      "totalTripsEvaluated": 71126,
+      "geometricallyEligibleTrips": 3938,
+      "temporallyEligibleTrips": 3889,
+      "passengersWithEligibleCandidate": 1920,
+      "unresolvedCandidates": 71126,
+      "screenedCandidatesForRouting": 3113,
+      "infeasibilityReasons": {
+        "missing_activity_coordinates": 0,
+        "minimum_trip_distance": 31829,
+        "access_distance": 29300,
+        "egress_distance": 5328,
+        "same_vertiport": 731,
+        "service_window": 49,
+        "unrouted": 3889
+      },
+      "precomputeSeconds": 1.3436556999804452,
+      "layoutScreenSeconds": 0.12126500002341345,
+      "interpretation": "Screened eligibility is a candidate, not network feasibility or adoption."
+    },
+    {
+      "passengerAgentsEvaluated": 18659,
+      "totalTripsEvaluated": 71126,
+      "geometricallyEligibleTrips": 4019,
+      "temporallyEligibleTrips": 3971,
+      "passengersWithEligibleCandidate": 1962,
+      "unresolvedCandidates": 71126,
+      "screenedCandidatesForRouting": 3182,
+      "infeasibilityReasons": {
+        "missing_activity_coordinates": 0,
+        "minimum_trip_distance": 31829,
+        "access_distance": 29290,
+        "egress_distance": 5220,
+        "same_vertiport": 768,
+        "service_window": 48,
+        "unrouted": 3971
+      },
+      "precomputeSeconds": 1.3436556999804452,
+      "layoutScreenSeconds": 0.11913399997865781,
+      "interpretation": "Screened eligibility is a candidate, not network feasibility or adoption."
+    },
+    {
+      "passengerAgentsEvaluated": 18659,
+      "totalTripsEvaluated": 71126,
+      "geometricallyEligibleTrips": 4033,
+      "temporallyEligibleTrips": 3985,
+      "passengersWithEligibleCandidate": 1949,
+      "unresolvedCandidates": 71126,
+      "screenedCandidatesForRouting": 3175,
+      "infeasibilityReasons": {
+        "missing_activity_coordinates": 0,
+        "minimum_trip_distance": 31829,
+        "access_distance": 29570,
+        "egress_distance": 5076,
+        "same_vertiport": 618,
+        "service_window": 48,
+        "unrouted": 3985
+      },
+      "precomputeSeconds": 1.3436556999804452,
+      "layoutScreenSeconds": 0.12388869997812435,
+      "interpretation": "Screened eligibility is a candidate, not network feasibility or adoption."
+    },
+    {
+      "passengerAgentsEvaluated": 18659,
+      "totalTripsEvaluated": 71126,
+      "geometricallyEligibleTrips": 3752,
+      "temporallyEligibleTrips": 3711,
+      "passengersWithEligibleCandidate": 1905,
+      "unresolvedCandidates": 71126,
+      "screenedCandidatesForRouting": 3057,
+      "infeasibilityReasons": {
+        "missing_activity_coordinates": 0,
+        "minimum_trip_distance": 31829,
+        "access_distance": 29625,
+        "egress_distance": 5352,
+        "same_vertiport": 568,
+        "service_window": 41,
+        "unrouted": 3711
+      },
+      "precomputeSeconds": 1.3436556999804452,
+      "layoutScreenSeconds": 0.11657030001515523,
+      "interpretation": "Screened eligibility is a candidate, not network feasibility or adoption."
+    }
+  ],
+  "limitation": "Distance screening microbenchmark only; includes no production network routing. Precomputation includes XML reading and all 100 sites."
+}

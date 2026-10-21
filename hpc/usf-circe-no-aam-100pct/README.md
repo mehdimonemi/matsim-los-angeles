@@ -13,7 +13,7 @@ The bundled JAR disables a legacy JAI ImageIO output-stream service provider tha
 
 The standard 100% population is `los-angeles-v1.0-population-100pct_2020-05-20.xml.gz`; it is distinct from the separate `_teleported` variant. The large population is downloaded on CIRCE and is not included in the transfer archive.
 
-The submit script targets the `amd_2021` partition with the `longrun` QOS, requesting 32 CPUs, 512 GB of memory, and 3 days. It loads CIRCE's `apps/jdk/11.0.5` module. These settings match the partition and module availability reported by the account used to prepare this package; edit them if your allocation or local queue policy differs.
+The submit script targets the `amd_2021` partition with the `longrun` QOS, requesting 32 CPUs, 980 GB of memory, an 850 GB Java heap, and 3 days. The large memory request follows a recorded full-population run that reached about 895 GiB RSS before Slurm killed it under a 900 GiB allocation. It fits only on the partition's 1 TB nodes; scheduling may take longer. It loads CIRCE's `apps/jdk/11.0.5` module.
 
 ## Upload and run
 

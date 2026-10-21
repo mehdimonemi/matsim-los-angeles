@@ -1,0 +1,438 @@
+{
+  "iterations_audited": 50,
+  "passenger_agents": 18659,
+  "freight_agents_excluded": 464,
+  "ever_had_aam_marker_plan_at_a_phase_end": 7812,
+  "ever_had_genuine_aircraft_plan_at_a_phase_end": 5968,
+  "ever_completed_aam_trip_across_50_iterations": 5948,
+  "never_had_aam_marker_plan_at_a_phase_end": 10847,
+  "never_had_genuine_aircraft_plan_at_a_phase_end": 12691,
+  "marker_opportunity_share_pct": 41.867195455276274,
+  "genuine_air_opportunity_share_pct": 31.98456508923308,
+  "ever_flew_share_pct": 31.87737820890723,
+  "aam_time_range_seconds_across_all_served_trips": {
+    "earliest_request": 24420.0,
+    "latest_request": 68117.0,
+    "earliest_pickup": 25320.0,
+    "latest_pickup": 68218.0,
+    "earliest_arrival": 25339.0,
+    "latest_arrival": 68282.0
+  },
+  "phase_summary": [
+    {
+      "phase": "stage-01",
+      "end_plan_marker_users": 7132,
+      "end_plan_genuine_air_users": 4969,
+      "actual_aam_users_union": 4863,
+      "actual_aam_trips_sum": 11651
+    },
+    {
+      "phase": "stage-02",
+      "end_plan_marker_users": 7132,
+      "end_plan_genuine_air_users": 4691,
+      "actual_aam_users_union": 4640,
+      "actual_aam_trips_sum": 11465
+    },
+    {
+      "phase": "stage-03",
+      "end_plan_marker_users": 7249,
+      "end_plan_genuine_air_users": 4314,
+      "actual_aam_users_union": 4263,
+      "actual_aam_trips_sum": 10789
+    },
+    {
+      "phase": "stage-04",
+      "end_plan_marker_users": 7279,
+      "end_plan_genuine_air_users": 3938,
+      "actual_aam_users_union": 3716,
+      "actual_aam_trips_sum": 9095
+    },
+    {
+      "phase": "stage-05",
+      "end_plan_marker_users": 7528,
+      "end_plan_genuine_air_users": 3816,
+      "actual_aam_users_union": 3776,
+      "actual_aam_trips_sum": 9349
+    },
+    {
+      "phase": "stage-06",
+      "end_plan_marker_users": 7695,
+      "end_plan_genuine_air_users": 3787,
+      "actual_aam_users_union": 3715,
+      "actual_aam_trips_sum": 9054
+    },
+    {
+      "phase": "stage-07",
+      "end_plan_marker_users": 7779,
+      "end_plan_genuine_air_users": 3706,
+      "actual_aam_users_union": 3651,
+      "actual_aam_trips_sum": 8922
+    },
+    {
+      "phase": "stage-08",
+      "end_plan_marker_users": 7812,
+      "end_plan_genuine_air_users": 3677,
+      "actual_aam_users_union": 3579,
+      "actual_aam_trips_sum": 8230
+    },
+    {
+      "phase": "final-convergence",
+      "end_plan_marker_users": 7812,
+      "end_plan_genuine_air_users": 3935,
+      "actual_aam_users_union": 3880,
+      "actual_aam_trips_sum": 13187
+    }
+  ],
+  "iteration_summary": [
+    {
+      "global_iteration": 0,
+      "phase": "stage-01",
+      "local_iteration": 0,
+      "actual_aam_users": 0,
+      "actual_aam_trips": 0
+    },
+    {
+      "global_iteration": 1,
+      "phase": "stage-01",
+      "local_iteration": 1,
+      "actual_aam_users": 4695,
+      "actual_aam_trips": 4695
+    },
+    {
+      "global_iteration": 2,
+      "phase": "stage-01",
+      "local_iteration": 2,
+      "actual_aam_users": 3016,
+      "actual_aam_trips": 3017
+    },
+    {
+      "global_iteration": 3,
+      "phase": "stage-01",
+      "local_iteration": 3,
+      "actual_aam_users": 2176,
+      "actual_aam_trips": 2176
+    },
+    {
+      "global_iteration": 4,
+      "phase": "stage-01",
+      "local_iteration": 4,
+      "actual_aam_users": 1763,
+      "actual_aam_trips": 1763
+    },
+    {
+      "global_iteration": 5,
+      "phase": "stage-02",
+      "local_iteration": 0,
+      "actual_aam_users": 1453,
+      "actual_aam_trips": 1453
+    },
+    {
+      "global_iteration": 6,
+      "phase": "stage-02",
+      "local_iteration": 1,
+      "actual_aam_users": 3204,
+      "actual_aam_trips": 3205
+    },
+    {
+      "global_iteration": 7,
+      "phase": "stage-02",
+      "local_iteration": 2,
+      "actual_aam_users": 2682,
+      "actual_aam_trips": 2683
+    },
+    {
+      "global_iteration": 8,
+      "phase": "stage-02",
+      "local_iteration": 3,
+      "actual_aam_users": 2241,
+      "actual_aam_trips": 2241
+    },
+    {
+      "global_iteration": 9,
+      "phase": "stage-02",
+      "local_iteration": 4,
+      "actual_aam_users": 1881,
+      "actual_aam_trips": 1883
+    },
+    {
+      "global_iteration": 10,
+      "phase": "stage-03",
+      "local_iteration": 0,
+      "actual_aam_users": 1289,
+      "actual_aam_trips": 1290
+    },
+    {
+      "global_iteration": 11,
+      "phase": "stage-03",
+      "local_iteration": 1,
+      "actual_aam_users": 2670,
+      "actual_aam_trips": 2670
+    },
+    {
+      "global_iteration": 12,
+      "phase": "stage-03",
+      "local_iteration": 2,
+      "actual_aam_users": 2492,
+      "actual_aam_trips": 2492
+    },
+    {
+      "global_iteration": 13,
+      "phase": "stage-03",
+      "local_iteration": 3,
+      "actual_aam_users": 2286,
+      "actual_aam_trips": 2289
+    },
+    {
+      "global_iteration": 14,
+      "phase": "stage-03",
+      "local_iteration": 4,
+      "actual_aam_users": 2044,
+      "actual_aam_trips": 2048
+    },
+    {
+      "global_iteration": 15,
+      "phase": "stage-04",
+      "local_iteration": 0,
+      "actual_aam_users": 1167,
+      "actual_aam_trips": 1168
+    },
+    {
+      "global_iteration": 16,
+      "phase": "stage-04",
+      "local_iteration": 1,
+      "actual_aam_users": 2124,
+      "actual_aam_trips": 2125
+    },
+    {
+      "global_iteration": 17,
+      "phase": "stage-04",
+      "local_iteration": 2,
+      "actual_aam_users": 2086,
+      "actual_aam_trips": 2087
+    },
+    {
+      "global_iteration": 18,
+      "phase": "stage-04",
+      "local_iteration": 3,
+      "actual_aam_users": 1929,
+      "actual_aam_trips": 1930
+    },
+    {
+      "global_iteration": 19,
+      "phase": "stage-04",
+      "local_iteration": 4,
+      "actual_aam_users": 1783,
+      "actual_aam_trips": 1785
+    },
+    {
+      "global_iteration": 20,
+      "phase": "stage-05",
+      "local_iteration": 0,
+      "actual_aam_users": 1439,
+      "actual_aam_trips": 1440
+    },
+    {
+      "global_iteration": 21,
+      "phase": "stage-05",
+      "local_iteration": 1,
+      "actual_aam_users": 2006,
+      "actual_aam_trips": 2006
+    },
+    {
+      "global_iteration": 22,
+      "phase": "stage-05",
+      "local_iteration": 2,
+      "actual_aam_users": 2076,
+      "actual_aam_trips": 2078
+    },
+    {
+      "global_iteration": 23,
+      "phase": "stage-05",
+      "local_iteration": 3,
+      "actual_aam_users": 1976,
+      "actual_aam_trips": 1977
+    },
+    {
+      "global_iteration": 24,
+      "phase": "stage-05",
+      "local_iteration": 4,
+      "actual_aam_users": 1846,
+      "actual_aam_trips": 1848
+    },
+    {
+      "global_iteration": 25,
+      "phase": "stage-06",
+      "local_iteration": 0,
+      "actual_aam_users": 1531,
+      "actual_aam_trips": 1533
+    },
+    {
+      "global_iteration": 26,
+      "phase": "stage-06",
+      "local_iteration": 1,
+      "actual_aam_users": 1948,
+      "actual_aam_trips": 1953
+    },
+    {
+      "global_iteration": 27,
+      "phase": "stage-06",
+      "local_iteration": 2,
+      "actual_aam_users": 1899,
+      "actual_aam_trips": 1901
+    },
+    {
+      "global_iteration": 28,
+      "phase": "stage-06",
+      "local_iteration": 3,
+      "actual_aam_users": 1882,
+      "actual_aam_trips": 1883
+    },
+    {
+      "global_iteration": 29,
+      "phase": "stage-06",
+      "local_iteration": 4,
+      "actual_aam_users": 1783,
+      "actual_aam_trips": 1784
+    },
+    {
+      "global_iteration": 30,
+      "phase": "stage-07",
+      "local_iteration": 0,
+      "actual_aam_users": 1502,
+      "actual_aam_trips": 1502
+    },
+    {
+      "global_iteration": 31,
+      "phase": "stage-07",
+      "local_iteration": 1,
+      "actual_aam_users": 1948,
+      "actual_aam_trips": 1954
+    },
+    {
+      "global_iteration": 32,
+      "phase": "stage-07",
+      "local_iteration": 2,
+      "actual_aam_users": 1877,
+      "actual_aam_trips": 1881
+    },
+    {
+      "global_iteration": 33,
+      "phase": "stage-07",
+      "local_iteration": 3,
+      "actual_aam_users": 1811,
+      "actual_aam_trips": 1813
+    },
+    {
+      "global_iteration": 34,
+      "phase": "stage-07",
+      "local_iteration": 4,
+      "actual_aam_users": 1771,
+      "actual_aam_trips": 1772
+    },
+    {
+      "global_iteration": 35,
+      "phase": "stage-08",
+      "local_iteration": 0,
+      "actual_aam_users": 995,
+      "actual_aam_trips": 995
+    },
+    {
+      "global_iteration": 36,
+      "phase": "stage-08",
+      "local_iteration": 1,
+      "actual_aam_users": 1853,
+      "actual_aam_trips": 1864
+    },
+    {
+      "global_iteration": 37,
+      "phase": "stage-08",
+      "local_iteration": 2,
+      "actual_aam_users": 1820,
+      "actual_aam_trips": 1833
+    },
+    {
+      "global_iteration": 38,
+      "phase": "stage-08",
+      "local_iteration": 3,
+      "actual_aam_users": 1846,
+      "actual_aam_trips": 1854
+    },
+    {
+      "global_iteration": 39,
+      "phase": "stage-08",
+      "local_iteration": 4,
+      "actual_aam_users": 1679,
+      "actual_aam_trips": 1684
+    },
+    {
+      "global_iteration": 40,
+      "phase": "final-convergence",
+      "local_iteration": 0,
+      "actual_aam_users": 1368,
+      "actual_aam_trips": 1376
+    },
+    {
+      "global_iteration": 41,
+      "phase": "final-convergence",
+      "local_iteration": 1,
+      "actual_aam_users": 1916,
+      "actual_aam_trips": 1930
+    },
+    {
+      "global_iteration": 42,
+      "phase": "final-convergence",
+      "local_iteration": 2,
+      "actual_aam_users": 1986,
+      "actual_aam_trips": 2004
+    },
+    {
+      "global_iteration": 43,
+      "phase": "final-convergence",
+      "local_iteration": 3,
+      "actual_aam_users": 1955,
+      "actual_aam_trips": 1968
+    },
+    {
+      "global_iteration": 44,
+      "phase": "final-convergence",
+      "local_iteration": 4,
+      "actual_aam_users": 1988,
+      "actual_aam_trips": 2002
+    },
+    {
+      "global_iteration": 45,
+      "phase": "final-convergence",
+      "local_iteration": 5,
+      "actual_aam_users": 1281,
+      "actual_aam_trips": 1285
+    },
+    {
+      "global_iteration": 46,
+      "phase": "final-convergence",
+      "local_iteration": 6,
+      "actual_aam_users": 916,
+      "actual_aam_trips": 919
+    },
+    {
+      "global_iteration": 47,
+      "phase": "final-convergence",
+      "local_iteration": 7,
+      "actual_aam_users": 698,
+      "actual_aam_trips": 700
+    },
+    {
+      "global_iteration": 48,
+      "phase": "final-convergence",
+      "local_iteration": 8,
+      "actual_aam_users": 561,
+      "actual_aam_trips": 562
+    },
+    {
+      "global_iteration": 49,
+      "phase": "final-convergence",
+      "local_iteration": 9,
+      "actual_aam_users": 440,
+      "actual_aam_trips": 441
+    }
+  ]
+}

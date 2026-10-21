@@ -1,0 +1,145 @@
+{
+  "stageMetrics": [
+    {
+      "stage": "stage-01",
+      "selected": 676,
+      "requests": 704,
+      "completed": 676,
+      "retainedScoredAlternatives": 1718
+    },
+    {
+      "stage": "stage-02",
+      "selected": 575,
+      "requests": 593,
+      "completed": 575,
+      "retainedScoredAlternatives": 2066
+    },
+    {
+      "stage": "stage-03",
+      "selected": 481,
+      "requests": 496,
+      "completed": 481,
+      "retainedScoredAlternatives": 1858
+    },
+    {
+      "stage": "stage-04",
+      "selected": 506,
+      "requests": 521,
+      "completed": 506,
+      "retainedScoredAlternatives": 1983
+    },
+    {
+      "stage": "stage-05",
+      "selected": 478,
+      "requests": 492,
+      "completed": 478,
+      "retainedScoredAlternatives": 1994
+    },
+    {
+      "stage": "stage-06",
+      "selected": 539,
+      "requests": 562,
+      "completed": 539,
+      "retainedScoredAlternatives": 2091
+    },
+    {
+      "stage": "stage-07",
+      "selected": 527,
+      "requests": 539,
+      "completed": 527,
+      "retainedScoredAlternatives": 2017
+    },
+    {
+      "stage": "stage-08",
+      "selected": 444,
+      "requests": 451,
+      "completed": 444,
+      "retainedScoredAlternatives": 1995
+    },
+    {
+      "stage": "final-convergence",
+      "selected": 14,
+      "requests": 14,
+      "completed": 14,
+      "retainedScoredAlternatives": 1615
+    }
+  ],
+  "scoredAamAndGroundUsers": 1615,
+  "aamBetterThanBestGround": 3,
+  "medianAamMinusGroundScore": -122.37585624744608,
+  "meanAamMinusGroundScore": -205.23477306705146,
+  "groundCarUsersWithoutCarInAamPlan": 404,
+  "examples": [
+    {
+      "person": "10034212",
+      "aamScore": 128.15539048532494,
+      "groundScore": 198.5998958804775,
+      "aamLegModes": {
+        "walk": 10,
+        "ride": 4,
+        "aam_drt": 1
+      },
+      "groundLegModes": {
+        "walk": 6,
+        "car": 3
+      }
+    },
+    {
+      "person": "10039104",
+      "aamScore": -281.16904442872243,
+      "groundScore": -18.888514979633698,
+      "aamLegModes": {
+        "walk": 23,
+        "ride": 10,
+        "aam_drt": 1
+      },
+      "groundLegModes": {
+        "walk": 20,
+        "ride": 10
+      }
+    },
+    {
+      "person": "10039672",
+      "aamScore": -117.2007412963274,
+      "groundScore": 129.36356294806527,
+      "aamLegModes": {
+        "walk": 14,
+        "ride": 4,
+        "ride_taxi": 2,
+        "aam_drt": 1
+      },
+      "groundLegModes": {
+        "walk": 10,
+        "car": 5
+      }
+    },
+    {
+      "person": "10041366",
+      "aamScore": 118.6562282493365,
+      "groundScore": 178.22797806012804,
+      "aamLegModes": {
+        "walk": 12,
+        "ride": 5,
+        "aam_drt": 1
+      },
+      "groundLegModes": {
+        "walk": 8,
+        "ride": 4
+      }
+    },
+    {
+      "person": "1004421",
+      "aamScore": -177.76683733275183,
+      "groundScore": 55.2448447600178,
+      "aamLegModes": {
+        "walk": 19,
+        "ride": 8,
+        "aam_drt": 1
+      },
+      "groundLegModes": {
+        "walk": 16,
+        "ride": 8
+      }
+    }
+  ]
+}

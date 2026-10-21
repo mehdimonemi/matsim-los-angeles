@@ -1,7 +1,7 @@
 # Scheduled AAM scenario
 
 This scenario represents AAM as ordinary MATSim public transit. At startup the runner appends ten
-vertiport stops, a direct route for every ordered vertiport pair, fixed departures, and four-seat
+vertiport stops, direct routes for feasible ordered vertiport pairs, fixed departures, and four-seat
 transit vehicles to the existing Los Angeles transit schedule.
 
 It intentionally does not install DRT/DVRP modules, create requests, or dispatch aircraft. Explicit
@@ -12,7 +12,11 @@ aircraft network mode are `aam`, which makes the scheduled flights identifiable 
 
 Configuration is in `la-aam-scheduled.config.xml`; vertiport coordinates are in `vertiports.csv`.
 Times and headways are seconds after midnight. The shipped service runs every 30 minutes from 07:00
-through 19:00 on every directed pair at 100 mph.
+through 19:00. Flight times use the TR Part D mission profile: a 40-second climb/transition, climb at
+56 knots and 1,000 ft/min, cruise at 98 knots, descent at 56 knots and 1,000 ft/min, and a 70-second
+hover/transition/descent. Cruise altitude is the highest feasible 500-ft tier from 1,000 through
+3,000 ft. Vertiport pairs shorter than the 1,000-ft climb/descent minimum (about 2.04 statute miles)
+are not scheduled. Scheduled AAM has a zero base fare and retains its $2-per-air-mile fare.
 
 `scheduled_aam` is the traveler-facing routing mode. Eligible trips are at least three miles and
 begin within five miles of an active vertiport. The router jointly evaluates the three nearest

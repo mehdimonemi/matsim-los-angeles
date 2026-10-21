@@ -1,0 +1,861 @@
+{
+  "metrics": {
+    "run": "drt-global-fresh-20261009-192241",
+    "completed_users": 440,
+    "completed_trips": 441,
+    "aam_trip_share_pct": 0.6164728248713934,
+    "final_result_users": 7812,
+    "selected_aam_users": 3033,
+    "rides": 441,
+    "rejections": 1,
+    "rejection_rate_pct": 0.22624434389140272,
+    "wait_mean_min": 5.653930461073318,
+    "wait_median_min": 4.3,
+    "wait_p95_min": 12.966666666666667,
+    "air_onboard_mean_min": 5.335487528344671,
+    "air_distance_mean_miles": 8.244145854874201,
+    "fare_mean_usd": 46.4882917097484,
+    "fare_p95_usd": 71.93385627932872,
+    "ground_mean_min": 32.39943310657596,
+    "ground_median_min": 30.65,
+    "ground_distance_mean_miles": 20.28338883009393,
+    "journey_mean_min": 43.38885109599396,
+    "journey_median_min": 41.11666666666667,
+    "journey_p95_min": 67.33333333333333,
+    "fleet_vehicles": 100,
+    "fleet_total_km": 4116.88991,
+    "fleet_empty_km": 754.5229300000001,
+    "fleet_empty_ratio_pct": 18.327498342067642,
+    "vehicle_km_per_ride": 9.33535126984127,
+    "rides_per_vehicle": 4.41,
+    "passenger_km_per_vehicle_km": 1.42,
+    "occupancy_0_pct": 18.327498342067642,
+    "occupancy_1_pct": 47.688080879481184,
+    "occupancy_2_pct": 16.289232033411356,
+    "occupancy_3_pct": 8.920062669346434,
+    "occupancy_4_pct": 8.775126075693388,
+    "income_user_median_usd": 74385.0,
+    "income_population_median_usd": 65641.0,
+    "income_user_ge_100k_pct": 36.61327231121282,
+    "income_user_lt_50k_pct": 30.892448512585812,
+    "corridors_used": 18,
+    "top3_corridor_share_pct": 57.142857142857146,
+    "final_aam_score_mean": 80.92618013871962,
+    "population_score_mean": 91.54471558588394,
+    "accepted_swaps": 8,
+    "moves_evaluated": 7200,
+    "optimizer_seconds": 1131.7415937999904,
+    "matsim_minutes": 195.45641177499928,
+    "original_sites_retained": 5,
+    "new_sites": 5
+  },
+  "stages": [
+    {
+      "stage": 1,
+      "aam_users": 4820,
+      "selected_aam_users": 3451,
+      "selected_aam_score_mean": -24.512826591922504,
+      "predicted_improvement": 9125.912117398577,
+      "moves_evaluated": 900,
+      "optimizer_seconds": 114.26923099998385,
+      "accepted": true
+    },
+    {
+      "stage": 2,
+      "aam_users": 4381,
+      "selected_aam_users": 3369,
+      "selected_aam_score_mean": -39.120895022785625,
+      "predicted_improvement": 2152.816795556806,
+      "moves_evaluated": 900,
+      "optimizer_seconds": 127.93319619999966,
+      "accepted": true
+    },
+    {
+      "stage": 3,
+      "aam_users": 3893,
+      "selected_aam_users": 3941,
+      "selected_aam_score_mean": -16.41130113419092,
+      "predicted_improvement": 1156.7994255588856,
+      "moves_evaluated": 900,
+      "optimizer_seconds": 140.03432629999588,
+      "accepted": true
+    },
+    {
+      "stage": 4,
+      "aam_users": 3434,
+      "selected_aam_users": 3961,
+      "selected_aam_score_mean": -50.17190018981175,
+      "predicted_improvement": 652.1600882781204,
+      "moves_evaluated": 900,
+      "optimizer_seconds": 148.81775300001027,
+      "accepted": true
+    },
+    {
+      "stage": 5,
+      "aam_users": 3258,
+      "selected_aam_users": 4011,
+      "selected_aam_score_mean": -0.13630089207816887,
+      "predicted_improvement": 468.6367233269848,
+      "moves_evaluated": 900,
+      "optimizer_seconds": 148.8211642000242,
+      "accepted": true
+    },
+    {
+      "stage": 6,
+      "aam_users": 3172,
+      "selected_aam_users": 4060,
+      "selected_aam_score_mean": -1.9993059730250557,
+      "predicted_improvement": 105.28134846827015,
+      "moves_evaluated": 900,
+      "optimizer_seconds": 148.45444119998137,
+      "accepted": true
+    },
+    {
+      "stage": 7,
+      "aam_users": 3108,
+      "selected_aam_users": 3990,
+      "selected_aam_score_mean": 6.879521264506916,
+      "predicted_improvement": 42.89969328092411,
+      "moves_evaluated": 900,
+      "optimizer_seconds": 149.20619860000443,
+      "accepted": true
+    },
+    {
+      "stage": 8,
+      "aam_users": 3051,
+      "selected_aam_users": 3962,
+      "selected_aam_score_mean": 11.797203776261677,
+      "predicted_improvement": 1195.9399710642174,
+      "moves_evaluated": 900,
+      "optimizer_seconds": 154.2052832999907,
+      "accepted": true
+    }
+  ],
+  "ground_modes": [
+    {
+      "phase": "access",
+      "mode": "walk",
+      "legs": 862,
+      "minutes": 791.5999999999983
+    },
+    {
+      "phase": "access",
+      "mode": "ride",
+      "legs": 352,
+      "minutes": 3052.7666666666646
+    },
+    {
+      "phase": "egress",
+      "mode": "walk",
+      "legs": 881,
+      "minutes": 683.083333333333
+    },
+    {
+      "phase": "egress",
+      "mode": "ride",
+      "legs": 429,
+      "minutes": 9136.149999999992
+    },
+    {
+      "phase": "access",
+      "mode": "ride_taxi",
+      "legs": 68,
+      "minutes": 446.04999999999984
+    },
+    {
+      "phase": "egress",
+      "mode": "ride_taxi",
+      "legs": 10,
+      "minutes": 109.71666666666667
+    },
+    {
+      "phase": "access",
+      "mode": "car",
+      "legs": 1,
+      "minutes": 32.0
+    },
+    {
+      "phase": "egress",
+      "mode": "car",
+      "legs": 1,
+      "minutes": 29.433333333333334
+    }
+  ],
+  "corridors": [
+    {
+      "corridor": "CAN084 \u2192 CAN011",
+      "passenger_trips": 94,
+      "share_pct": 21.31519274376417
+    },
+    {
+      "corridor": "VP08 \u2192 CAN058",
+      "passenger_trips": 80,
+      "share_pct": 18.140589569160998
+    },
+    {
+      "corridor": "CAN099 \u2192 CAN084",
+      "passenger_trips": 78,
+      "share_pct": 17.687074829931973
+    },
+    {
+      "corridor": "CAN011 \u2192 CAN084",
+      "passenger_trips": 59,
+      "share_pct": 13.378684807256235
+    },
+    {
+      "corridor": "CAN058 \u2192 VP08",
+      "passenger_trips": 44,
+      "share_pct": 9.977324263038549
+    },
+    {
+      "corridor": "CAN074 \u2192 VP08",
+      "passenger_trips": 35,
+      "share_pct": 7.936507936507937
+    },
+    {
+      "corridor": "CAN074 \u2192 CAN011",
+      "passenger_trips": 12,
+      "share_pct": 2.7210884353741496
+    },
+    {
+      "corridor": "CAN011 \u2192 CAN074",
+      "passenger_trips": 9,
+      "share_pct": 2.0408163265306123
+    },
+    {
+      "corridor": "CAN074 \u2192 CAN084",
+      "passenger_trips": 6,
+      "share_pct": 1.3605442176870748
+    },
+    {
+      "corridor": "CAN012 \u2192 VP06",
+      "passenger_trips": 6,
+      "share_pct": 1.3605442176870748
+    },
+    {
+      "corridor": "CAN084 \u2192 CAN074",
+      "passenger_trips": 5,
+      "share_pct": 1.1337868480725624
+    },
+    {
+      "corridor": "VP08 \u2192 CAN074",
+      "passenger_trips": 3,
+      "share_pct": 0.6802721088435374
+    },
+    {
+      "corridor": "VP06 \u2192 CAN012",
+      "passenger_trips": 3,
+      "share_pct": 0.6802721088435374
+    },
+    {
+      "corridor": "CAN074 \u2192 CAN058",
+      "passenger_trips": 2,
+      "share_pct": 0.45351473922902497
+    },
+    {
+      "corridor": "CAN099 \u2192 CAN011",
+      "passenger_trips": 2,
+      "share_pct": 0.45351473922902497
+    },
+    {
+      "corridor": "CAN049 \u2192 CAN092",
+      "passenger_trips": 1,
+      "share_pct": 0.22675736961451248
+    },
+    {
+      "corridor": "CAN011 \u2192 CAN058",
+      "passenger_trips": 1,
+      "share_pct": 0.22675736961451248
+    },
+    {
+      "corridor": "VP08 \u2192 CAN084",
+      "passenger_trips": 1,
+      "share_pct": 0.22675736961451248
+    }
+  ],
+  "hours": [
+    {
+      "hour": 0,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "hour": 1,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "hour": 2,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "hour": 3,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "hour": 4,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "hour": 5,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "hour": 6,
+      "air_legs": 2,
+      "mean_wait_min": 10.666666666666668
+    },
+    {
+      "hour": 7,
+      "air_legs": 33,
+      "mean_wait_min": 2.6025252525252527
+    },
+    {
+      "hour": 8,
+      "air_legs": 36,
+      "mean_wait_min": 4.220370370370371
+    },
+    {
+      "hour": 9,
+      "air_legs": 42,
+      "mean_wait_min": 5.617063492063492
+    },
+    {
+      "hour": 10,
+      "air_legs": 38,
+      "mean_wait_min": 5.24780701754386
+    },
+    {
+      "hour": 11,
+      "air_legs": 36,
+      "mean_wait_min": 6.772222222222222
+    },
+    {
+      "hour": 12,
+      "air_legs": 49,
+      "mean_wait_min": 7.032993197278912
+    },
+    {
+      "hour": 13,
+      "air_legs": 54,
+      "mean_wait_min": 5.955864197530864
+    },
+    {
+      "hour": 14,
+      "air_legs": 51,
+      "mean_wait_min": 6.617320261437908
+    },
+    {
+      "hour": 15,
+      "air_legs": 40,
+      "mean_wait_min": 5.49
+    },
+    {
+      "hour": 16,
+      "air_legs": 16,
+      "mean_wait_min": 4.640625
+    },
+    {
+      "hour": 17,
+      "air_legs": 26,
+      "mean_wait_min": 6.648076923076923
+    },
+    {
+      "hour": 18,
+      "air_legs": 18,
+      "mean_wait_min": 4.70462962962963
+    },
+    {
+      "hour": 19,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "hour": 20,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "hour": 21,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "hour": 22,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "hour": 23,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    }
+  ],
+  "occupancy": [
+    {
+      "passengers": 0,
+      "distance_km": 754.5229300000001,
+      "distance_share_pct": 18.327498342067642
+    },
+    {
+      "passengers": 1,
+      "distance_km": 1963.26579,
+      "distance_share_pct": 47.688080879481184
+    },
+    {
+      "passengers": 2,
+      "distance_km": 670.60975,
+      "distance_share_pct": 16.289232033411356
+    },
+    {
+      "passengers": 3,
+      "distance_km": 367.22916,
+      "distance_share_pct": 8.920062669346434
+    },
+    {
+      "passengers": 4,
+      "distance_km": 361.26228000000003,
+      "distance_share_pct": 8.775126075693388
+    }
+  ],
+  "fare_distribution": [
+    {
+      "cumulative_share_pct": 0,
+      "fare_usd": 30.932056788356
+    },
+    {
+      "cumulative_share_pct": 2,
+      "fare_usd": 30.932056788356
+    },
+    {
+      "cumulative_share_pct": 4,
+      "fare_usd": 30.932056788356
+    },
+    {
+      "cumulative_share_pct": 6,
+      "fare_usd": 30.932056788356
+    },
+    {
+      "cumulative_share_pct": 8,
+      "fare_usd": 30.932056788356
+    },
+    {
+      "cumulative_share_pct": 10,
+      "fare_usd": 30.932056788356
+    },
+    {
+      "cumulative_share_pct": 12,
+      "fare_usd": 30.932056788356
+    },
+    {
+      "cumulative_share_pct": 14,
+      "fare_usd": 30.932056788356
+    },
+    {
+      "cumulative_share_pct": 16,
+      "fare_usd": 30.932056788356
+    },
+    {
+      "cumulative_share_pct": 18,
+      "fare_usd": 30.932056788356
+    },
+    {
+      "cumulative_share_pct": 20,
+      "fare_usd": 30.932056788356
+    },
+    {
+      "cumulative_share_pct": 22,
+      "fare_usd": 30.932056788356
+    },
+    {
+      "cumulative_share_pct": 24,
+      "fare_usd": 30.932056788356
+    },
+    {
+      "cumulative_share_pct": 25,
+      "fare_usd": 30.932056788356
+    },
+    {
+      "cumulative_share_pct": 26,
+      "fare_usd": 30.932056788356
+    },
+    {
+      "cumulative_share_pct": 28,
+      "fare_usd": 31.173148810944085
+    },
+    {
+      "cumulative_share_pct": 30,
+      "fare_usd": 37.974677881173946
+    },
+    {
+      "cumulative_share_pct": 32,
+      "fare_usd": 37.974677881173946
+    },
+    {
+      "cumulative_share_pct": 34,
+      "fare_usd": 37.974677881173946
+    },
+    {
+      "cumulative_share_pct": 36,
+      "fare_usd": 37.974677881173946
+    },
+    {
+      "cumulative_share_pct": 38,
+      "fare_usd": 37.974677881173946
+    },
+    {
+      "cumulative_share_pct": 40,
+      "fare_usd": 37.974677881173946
+    },
+    {
+      "cumulative_share_pct": 42,
+      "fare_usd": 37.974677881173946
+    },
+    {
+      "cumulative_share_pct": 44,
+      "fare_usd": 37.974677881173946
+    },
+    {
+      "cumulative_share_pct": 46,
+      "fare_usd": 37.974677881173946
+    },
+    {
+      "cumulative_share_pct": 48,
+      "fare_usd": 37.974677881173946
+    },
+    {
+      "cumulative_share_pct": 50,
+      "fare_usd": 37.974677881173946
+    },
+    {
+      "cumulative_share_pct": 52,
+      "fare_usd": 37.974677881173946
+    },
+    {
+      "cumulative_share_pct": 54,
+      "fare_usd": 37.974677881173946
+    },
+    {
+      "cumulative_share_pct": 56,
+      "fare_usd": 37.974677881173946
+    },
+    {
+      "cumulative_share_pct": 58,
+      "fare_usd": 37.974677881173946
+    },
+    {
+      "cumulative_share_pct": 60,
+      "fare_usd": 37.974677881173946
+    },
+    {
+      "cumulative_share_pct": 62,
+      "fare_usd": 50.34369283385031
+    },
+    {
+      "cumulative_share_pct": 64,
+      "fare_usd": 50.34369283385031
+    },
+    {
+      "cumulative_share_pct": 66,
+      "fare_usd": 50.34369283385031
+    },
+    {
+      "cumulative_share_pct": 68,
+      "fare_usd": 50.34369283385031
+    },
+    {
+      "cumulative_share_pct": 70,
+      "fare_usd": 52.20904915294679
+    },
+    {
+      "cumulative_share_pct": 72,
+      "fare_usd": 60.53045215938917
+    },
+    {
+      "cumulative_share_pct": 74,
+      "fare_usd": 61.45256700866937
+    },
+    {
+      "cumulative_share_pct": 75,
+      "fare_usd": 62.90284737135131
+    },
+    {
+      "cumulative_share_pct": 76,
+      "fare_usd": 62.902847371351314
+    },
+    {
+      "cumulative_share_pct": 78,
+      "fare_usd": 62.90284737135131
+    },
+    {
+      "cumulative_share_pct": 80,
+      "fare_usd": 62.90284737135131
+    },
+    {
+      "cumulative_share_pct": 82,
+      "fare_usd": 62.902847371351314
+    },
+    {
+      "cumulative_share_pct": 84,
+      "fare_usd": 62.9028473713513
+    },
+    {
+      "cumulative_share_pct": 86,
+      "fare_usd": 62.902847371351314
+    },
+    {
+      "cumulative_share_pct": 88,
+      "fare_usd": 62.90284737135131
+    },
+    {
+      "cumulative_share_pct": 90,
+      "fare_usd": 62.90284737135131
+    },
+    {
+      "cumulative_share_pct": 92,
+      "fare_usd": 68.50637278294758
+    },
+    {
+      "cumulative_share_pct": 94,
+      "fare_usd": 71.31994154139824
+    },
+    {
+      "cumulative_share_pct": 95,
+      "fare_usd": 71.93385627932872
+    },
+    {
+      "cumulative_share_pct": 96,
+      "fare_usd": 86.60691561282106
+    },
+    {
+      "cumulative_share_pct": 98,
+      "fare_usd": 102.60101010101008
+    },
+    {
+      "cumulative_share_pct": 100,
+      "fare_usd": 142.13885906307166
+    }
+  ],
+  "wait_time_distribution": [
+    {
+      "cumulative_share_pct": 0,
+      "wait_minutes": 0.016666666666666666
+    },
+    {
+      "cumulative_share_pct": 2,
+      "wait_minutes": 0.31666666666666665
+    },
+    {
+      "cumulative_share_pct": 4,
+      "wait_minutes": 0.5933333333333334
+    },
+    {
+      "cumulative_share_pct": 6,
+      "wait_minutes": 0.7966666666666666
+    },
+    {
+      "cumulative_share_pct": 8,
+      "wait_minutes": 1.0600000000000003
+    },
+    {
+      "cumulative_share_pct": 10,
+      "wait_minutes": 1.45
+    },
+    {
+      "cumulative_share_pct": 12,
+      "wait_minutes": 1.75
+    },
+    {
+      "cumulative_share_pct": 14,
+      "wait_minutes": 2.01
+    },
+    {
+      "cumulative_share_pct": 16,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "cumulative_share_pct": 18,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "cumulative_share_pct": 20,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "cumulative_share_pct": 22,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "cumulative_share_pct": 24,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "cumulative_share_pct": 25,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "cumulative_share_pct": 26,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "cumulative_share_pct": 28,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "cumulative_share_pct": 30,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "cumulative_share_pct": 32,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "cumulative_share_pct": 34,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "cumulative_share_pct": 36,
+      "wait_minutes": 2.2666666666666666
+    },
+    {
+      "cumulative_share_pct": 38,
+      "wait_minutes": 2.3333333333333335
+    },
+    {
+      "cumulative_share_pct": 40,
+      "wait_minutes": 2.55
+    },
+    {
+      "cumulative_share_pct": 42,
+      "wait_minutes": 2.8199999999999994
+    },
+    {
+      "cumulative_share_pct": 44,
+      "wait_minutes": 2.966666666666667
+    },
+    {
+      "cumulative_share_pct": 46,
+      "wait_minutes": 3.166666666666667
+    },
+    {
+      "cumulative_share_pct": 48,
+      "wait_minutes": 3.756666666666665
+    },
+    {
+      "cumulative_share_pct": 50,
+      "wait_minutes": 4.3
+    },
+    {
+      "cumulative_share_pct": 52,
+      "wait_minutes": 4.523333333333333
+    },
+    {
+      "cumulative_share_pct": 54,
+      "wait_minutes": 4.986666666666667
+    },
+    {
+      "cumulative_share_pct": 56,
+      "wait_minutes": 5.383333333333338
+    },
+    {
+      "cumulative_share_pct": 58,
+      "wait_minutes": 5.813333333333332
+    },
+    {
+      "cumulative_share_pct": 60,
+      "wait_minutes": 6.5
+    },
+    {
+      "cumulative_share_pct": 62,
+      "wait_minutes": 6.75
+    },
+    {
+      "cumulative_share_pct": 64,
+      "wait_minutes": 7.283333333333333
+    },
+    {
+      "cumulative_share_pct": 66,
+      "wait_minutes": 7.596666666666671
+    },
+    {
+      "cumulative_share_pct": 68,
+      "wait_minutes": 8.166666666666666
+    },
+    {
+      "cumulative_share_pct": 70,
+      "wait_minutes": 8.366666666666667
+    },
+    {
+      "cumulative_share_pct": 72,
+      "wait_minutes": 8.686666666666667
+    },
+    {
+      "cumulative_share_pct": 74,
+      "wait_minutes": 9.10666666666667
+    },
+    {
+      "cumulative_share_pct": 75,
+      "wait_minutes": 9.416666666666666
+    },
+    {
+      "cumulative_share_pct": 76,
+      "wait_minutes": 9.466666666666667
+    },
+    {
+      "cumulative_share_pct": 78,
+      "wait_minutes": 9.926666666666666
+    },
+    {
+      "cumulative_share_pct": 80,
+      "wait_minutes": 10.133333333333333
+    },
+    {
+      "cumulative_share_pct": 82,
+      "wait_minutes": 10.849999999999996
+    },
+    {
+      "cumulative_share_pct": 84,
+      "wait_minutes": 11.266666666666667
+    },
+    {
+      "cumulative_share_pct": 86,
+      "wait_minutes": 11.883333333333333
+    },
+    {
+      "cumulative_share_pct": 88,
+      "wait_minutes": 11.933333333333334
+    },
+    {
+      "cumulative_share_pct": 90,
+      "wait_minutes": 11.933333333333334
+    },
+    {
+      "cumulative_share_pct": 92,
+      "wait_minutes": 12.056666666666668
+    },
+    {
+      "cumulative_share_pct": 94,
+      "wait_minutes": 12.766666666666664
+    },
+    {
+      "cumulative_share_pct": 95,
+      "wait_minutes": 12.966666666666667
+    },
+    {
+      "cumulative_share_pct": 96,
+      "wait_minutes": 13.356666666666666
+    },
+    {
+      "cumulative_share_pct": 98,
+      "wait_minutes": 13.849999999999998
+    },
+    {
+      "cumulative_share_pct": 100,
+      "wait_minutes": 14.85
+    }
+  ]
+}

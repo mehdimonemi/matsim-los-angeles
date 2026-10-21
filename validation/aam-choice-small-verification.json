@@ -1,0 +1,32 @@
+{
+  "qsimEndSeconds": 129600,
+  "serviceStartSeconds": 25200,
+  "serviceEndSeconds": 68400,
+  "aircraft": 100,
+  "iterations": [
+    {
+      "selectedAamUsers": 0,
+      "requestsSubmitted": 0,
+      "completedAamUsers": 0,
+      "rejectedRequests": 0,
+      "screenPasses": 3,
+      "fullRoutingAttempts": 2
+    },
+    {
+      "selectedAamUsers": 1,
+      "requestsSubmitted": 1,
+      "completedAamUsers": 1,
+      "rejectedRequests": 0,
+      "screenPasses": 3,
+      "fullRoutingAttempts": 2
+    },
+    {
+      "selectedAamUsers": 0,
+      "requestsSubmitted": 0,
+      "completedAamUsers": 0,
+      "rejectedRequests": 0,
+      "screenPasses": 3,
+      "fullRoutingAttempts": 2
+    }
+  ]
+}

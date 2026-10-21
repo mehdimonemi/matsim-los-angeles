@@ -40,7 +40,7 @@ public final class AamSelectedPlanValidator implements BeforeMobsimListener {
             Plan ground=p.getPlans().stream().filter(plan->!AamFeederPolicy.hasAir(plan))
                 .max(Comparator.comparingDouble(plan->plan.getScore()==null?Double.NEGATIVE_INFINITY:plan.getScore())).orElseThrow(()->new IllegalStateException("Prohibited AAM walking for "+p.getId()+" and no ground alternative"));
             p.setSelectedPlan(ground);
-            org.apache.log4j.Logger.getLogger(getClass()).warn("Rejected prohibited AAM feeder in selected plan; selected preserved ground alternative: person="+p.getId());
+            org.apache.log4j.Logger.getLogger(getClass()).warn("Rejected infeasible AAM trip in selected plan; selected preserved ground alternative: person="+p.getId());
         }
     }
     public static boolean valid(Plan plan,double distance,double time){
@@ -52,7 +52,10 @@ public final class AamSelectedPlanValidator implements BeforeMobsimListener {
                     org.matsim.api.core.v01.Id<?> line=((org.matsim.pt.routes.TransitPassengerRoute)l.getRoute()).getLineId();
                     air|=line!=null&&line.toString().startsWith("aam_sched_line_");
                 }
-                if(air){if(first<0)first=i;last=i;}
+                if(air){
+                    if(l.getRoute()==null||!AamMissionProfile.isFeasible(l.getRoute().getDistance()))return false;
+                    if(first<0)first=i;last=i;
+                }
             }
             if(first>=0&&(!AamFeederPolicy.admissible(elements.subList(0,first),distance,time)
                     ||!AamFeederPolicy.admissible(elements.subList(last+1,elements.size()),distance,time)))return false;

@@ -77,6 +77,11 @@ def compare(package,output,methods=METHODS,runner=run,resume=False):
             comparable=('populationHash','scoringHash','supplyFareHash','initialLayout')
             if any(previous.get(key)!=manifest.get(key) for key in comparable):
                 raise ValueError('Resume package inputs differ from the existing DRT suite')
+        prior_failure=output/'failure.json'
+        if prior_failure.is_file():
+            index=1
+            while (output/f'failure-prior-{index:02d}.json').exists():index+=1
+            prior_failure.replace(output/f'failure-prior-{index:02d}.json')
     else:
         output.mkdir(parents=True,exist_ok=False)
     suite_record=dict(service='drt',package=str(package.resolve()),methods=list(methods),

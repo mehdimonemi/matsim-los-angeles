@@ -14,6 +14,7 @@ from pathlib import Path
 import numpy as np
 
 from scripts.aam.score_optimizer.common import MILE, atomic_write_layout, distance_matrix, read_sites
+from scripts.aam.score_optimizer.mission_profile import MINIMUM_FLIGHT_DISTANCE_METERS, flight_time_seconds
 from .population import PREFIX, is_main_activity, route_data
 
 PERFORMING_UTIL_HR = 9.84
@@ -242,9 +243,9 @@ def read_aam_users(population: Path, candidates: list[dict], minimum_trip_meters
 class ScheduledScoreObjective:
     def __init__(self, users: UserData, candidates: list[dict], current: list[int], *,
                  service_start: float = 25200, service_end: float = 68400, headway: float = 1800,
-                 base_fare: float = 30.0, fare_per_mile: float = 2.0,
+                 base_fare: float = 0.0, fare_per_mile: float = 2.0,
                  maximum_wait_seconds: float = 1800.0,
-                 cruise_speed: float = 44.704, access_speed: float = 13.89,
+                 cruise_speed: float = 98.0 * 1852.0 / 3600.0, access_speed: float = 13.89,
                  access_beeline_factor: float = 1.4,
                  maximum_ground_access_distance: float = MAXIMUM_GROUND_ACCESS_METERS,
                  routed_candidate_vertiports: int = ROUTED_CANDIDATE_VERTIPORTS):
@@ -281,13 +282,15 @@ class ScheduledScoreObjective:
         arrival = self.users.departure_seconds[rows] + access_time
         departure = self.service_start + np.ceil(np.maximum(0, arrival - self.service_start) / self.headway) * self.headway
         wait = departure - arrival
-        flight = np.ceil(self.site_distance[origins, destinations] / self.cruise_speed)
+        flight_distance = self.site_distance[origins, destinations]
+        flight = flight_time_seconds(flight_distance)
         money = self.users.money_utility[self.users.trip_person_index[rows]]
         result = ((PERFORMING_UTIL_HR - ACCESS_TRAVEL_UTIL_HR) * (access_time + egress_time) / 3600
                   + ACCESS_MONETARY_DISTANCE_RATE * (access_distance + egress_distance) * money
                   + (PERFORMING_UTIL_HR - SCHEDULED_AAM_TRAVEL_UTIL_HR) * (wait + flight) / 3600
                   + (self.base_fare + self.fare_per_mile * self.site_distance[origins, destinations] / MILE) * money)
         feasible = ((origins != destinations)
+                    & (flight_distance >= MINIMUM_FLIGHT_DISTANCE_METERS - 1e-6)
                     & (self.origin_beeline[rows, origins] <= self.maximum_ground_access_distance)
                     & (departure <= self.service_end + 1e-6)
                     & (wait <= self.maximum_wait_seconds + 1e-6))
@@ -296,7 +299,8 @@ class ScheduledScoreObjective:
         # real taxi/car feeder can catch the last flight when the surrogate's
         # uniform access speed predicts an arrival a few seconds too late.
         if trust_observed_feasibility:
-            feasible = origins != destinations
+            feasible = ((origins != destinations)
+                        & (flight_distance >= MINIMUM_FLIGHT_DISTANCE_METERS - 1e-6))
         return np.where(feasible, result, math.inf)
 
     def minimum_cost(self, active: list[int]) -> tuple[np.ndarray, np.ndarray]:

@@ -25,8 +25,7 @@ from pathlib import Path
 import numpy as np
 
 from .common import MILE, atomic_write_layout, distance_matrix, read_sites
-
-AIR_SPEED_MPS = 100.0 * MILE / 3600.0
+from .mission_profile import MINIMUM_FLIGHT_DISTANCE_METERS, flight_time_seconds
 GROUND_SPEED_MPS = 25.0 * MILE / 3600.0
 WALK_SPEED_MPS = 1.34
 GROUND_CIRCUITY = 1.3
@@ -440,7 +439,7 @@ class ScoreObjective:
     def pair_cost(self, rows: np.ndarray, origins: np.ndarray, destinations: np.ndarray, screen=True) -> np.ndarray:
         distance = self.site_distance[origins, destinations]
         wait = self.waits[self.departure_bins[rows], origins, destinations]
-        air_time = distance / AIR_SPEED_MPS + 1.0
+        air_time = flight_time_seconds(distance)
         feeder_time = np.minimum(self.origin_distance[rows, origins] * GROUND_CIRCUITY / WALK_SPEED_MPS,
                                  self.origin_distance[rows, origins] * GROUND_CIRCUITY / GROUND_SPEED_MPS)
         arrival_at_vertiport = self.users.departure_seconds[rows] + feeder_time
@@ -453,12 +452,14 @@ class ScoreObjective:
         operational = ((self.origin_distance[rows, origins] <= self.max_access_distance)
                        & (self.destination_distance[rows, destinations] <= self.max_egress_distance)
                        & (origins != destinations)
+                       & (distance >= MINIMUM_FLIGHT_DISTANCE_METERS - 1e-6)
                        & (self.allow_pre_service_requests | (arrival_at_vertiport >= self.service_start_time))
                        & (arrival_at_vertiport <= self.service_end_time)
                        & (boarding <= self.service_end_time)
                        & (boarding + air_time + 120 <= self.service_end_time)
                        & (wait <= self.maximum_wait_seconds))
-        return np.where(operational, cost, math.inf) if screen else cost
+        return np.where(operational, cost, math.inf) if screen else np.where(
+            distance >= MINIMUM_FLIGHT_DISTANCE_METERS - 1e-6, cost, math.inf)
 
     def minimum_cost(self, active: list[int]) -> tuple[np.ndarray, np.ndarray]:
         active_array = np.asarray(active, dtype=int)

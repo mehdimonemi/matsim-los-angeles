@@ -11,6 +11,7 @@ import time
 import xml.etree.ElementTree as ET
 from pathlib import Path
 import numpy as np
+from .mission_profile import MINIMUM_FLIGHT_DISTANCE_METERS, flight_time_seconds
 from .common import MILE, distance_matrix
 from .optimizer import _is_main_activity, _time_seconds
 
@@ -71,8 +72,11 @@ class TripScreen:
                 if origin == destination: continue
                 g = ((self.direct >= self.minimum) & (self.origin_distance[:, origin] <= self.access)
                      & (self.destination_distance[:, destination] <= self.egress))
+                flight_distance = self.site_distance[origin, destination]
+                if flight_distance < MINIMUM_FLIGHT_DISTANCE_METERS - 1e-6:
+                    continue
                 geometric |= g
-                flight = self.site_distance[origin, destination]/(100*MILE/3600)+1
+                flight = float(flight_time_seconds(flight_distance))
                 valid = g & (np.maximum(self.departure, self.start)+flight+120 <= self.end)
                 temporal |= valid
                 cost = (self.origin_distance[:, origin]+self.destination_distance[:, destination])/13.89+flight

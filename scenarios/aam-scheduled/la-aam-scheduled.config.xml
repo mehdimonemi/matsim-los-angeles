@@ -8,7 +8,9 @@
 		<param name="serviceEndTime" value="68400.0" />
 		<param name="headway" value="1800.0" />
 		<param name="dwellTime" value="60.0" />
-		<param name="cruiseSpeed" value="44.704" />
+		<param name="cruiseSpeed" value="50.4155555556" />
+		<param name="baseFare" value="0" />
+		<param name="farePerMile" value="2" />
 		<param name="seats" value="4" />
 		<!-- Generate explicit AAM-containing PT alternatives; normal scoring decides whether they survive. -->
 		<param name="innovationEnabled" value="true" />

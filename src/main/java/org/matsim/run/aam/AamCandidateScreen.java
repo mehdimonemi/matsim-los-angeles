@@ -78,7 +78,7 @@ public final class AamCandidateScreen {
                 if(candidate.origin==null||candidate.destination==null)candidate.reason="missing_activity_coordinates";
                 else if(AamMultimodalRoutingModule.distance(candidate.origin,candidate.destination)<cfg.getMinimumTripDistanceMiles()*MILE)candidate.reason="minimum_trip_distance";
                 else{
-                    boolean access=false,egress=false;
+                    boolean access=false,egress=false,flightDistance=false;
                     for(int oi=0;oi<ports.size();oi++){
                         AamMultimodalRoutingModule.Vertiport o=ports.get(oi);double ad=accessDistances[oi];
                         if(ad>cfg.getMaxAccessDistanceMiles()*MILE)continue;access=true;
@@ -86,8 +86,11 @@ public final class AamCandidateScreen {
                             AamMultimodalRoutingModule.Vertiport d=ports.get(di);double ed=egressDistances[di];
                             if(ed>cfg.getMaxEgressDistanceMiles()*MILE)continue;egress=true;
                             if(o.id.equals(d.id))continue;
+                            double airDistance=AamMultimodalRoutingModule.distance(o.coord,d.coord);
+                            if(!AamMissionProfile.isFeasible(airDistance))continue;
+                            flightDistance=true;
                             candidate.geometric=true;
-                            double flight=AamMultimodalRoutingModule.distance(o.coord,d.coord)/AIR_SPEED+1;
+                            double flight=AamMissionProfile.flightTimeSeconds(airDistance);
                             // Optimistic lower bound, not a network travel-time estimate.
                             // Unknown feeder time cannot exclude an otherwise possible pre-opening request.
                             boolean temporal=Double.isFinite(candidate.departure)&&candidate.departure<=cfg.getServiceEndTime()
@@ -101,7 +104,7 @@ public final class AamCandidateScreen {
                             }
                         }
                     }
-                    candidate.reason=!access?"access_distance":!egress?"egress_distance":!candidate.geometric?"same_vertiport":!candidate.temporal?"service_window":"unrouted";
+                    candidate.reason=!access?"access_distance":!egress?"egress_distance":!flightDistance?"minimum_air_flight_distance":!candidate.temporal?"service_window":"unrouted";
                 }
                 candidate.proxy=proxy;found.add(candidate);
             }

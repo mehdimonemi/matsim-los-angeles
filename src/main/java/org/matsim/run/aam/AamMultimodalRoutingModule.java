@@ -60,7 +60,9 @@ public final class AamMultimodalRoutingModule implements RoutingModule {
                 if(a==null)continue;
                 double arrival=end(departure,new ArrayList<>(a));
                 if(!cfg.getAllowPreServiceRequests()&&arrival<cfg.getServiceStartTime())continue;
-                double flight=distance(o.coord,d.coord)/AIR_SPEED+1;
+                double flightDistance=distance(o.coord,d.coord);
+                if(!AamMissionProfile.isFeasible(flightDistance))continue;
+                double flight=AamMissionProfile.flightTimeSeconds(flightDistance);
                 double wait=serviceAwareWait(arrival,cfg.getServiceStartTime(),cfg.getMaxWaitTime(),
                         waits.estimate(o.airLink,d.airLink,arrival,cfg.getExpectedWaitTime(),cfg.getMaxWaitTime()));
                 if(!Double.isFinite(wait)||arrival+wait+flight+120>cfg.getServiceEndTime())continue;
@@ -133,7 +135,7 @@ public final class AamMultimodalRoutingModule implements RoutingModule {
         result.add(stage(o.roadLink,o.coord));
         result.add(connector(o.roadLink,o.airLink,now));result.add(stage(o.airLink,o.coord));
         Leg air=s.getPopulation().getFactory().createLeg(AIR);double dist=distance(o.coord,d.coord);
-        DrtRoute r=new DrtRoute(o.airLink,d.airLink);r.setDistance(dist);r.setDirectRideTime(dist/AIR_SPEED+1);
+        DrtRoute r=new DrtRoute(o.airLink,d.airLink);r.setDistance(dist);r.setDirectRideTime(AamMissionProfile.flightTimeSeconds(dist));
         // MATSim 13 interprets DrtRoute.travelTime as the hard latest-arrival
         // allowance, NOT an expected time. Keep the expectation on the Leg.
         double alpha=1.2,beta=1800;
@@ -143,7 +145,7 @@ public final class AamMultimodalRoutingModule implements RoutingModule {
                 if(AIR.equals(drt.getMode())){alpha=drt.getMaxTravelTimeAlpha();beta=drt.getMaxTravelTimeBeta();}
         r.setMaxWaitTime(cfg.getMaxWaitTime());r.setTravelTime(alpha*r.getDirectRideTime()+beta);
         air.setRoute(r);air.setDepartureTime(now);air.setTravelTime(r.getDirectRideTime()+wait);result.add(air);
-        now+=wait+dist/AIR_SPEED+1;result.add(stage(d.airLink,d.coord));
+        now+=wait+AamMissionProfile.flightTimeSeconds(dist);result.add(stage(d.airLink,d.coord));
         result.add(connector(d.airLink,d.roadLink,now));result.add(stage(d.roadLink,d.coord));
         result.addAll(egress);
         return result;

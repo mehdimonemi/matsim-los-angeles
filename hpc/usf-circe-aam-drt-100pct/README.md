@@ -28,7 +28,7 @@ myquota
 sinfo -p amd_2021 -N -o "%N %c %m %t"
 ```
 
-The submit script requests `amd_2021`, QOS `longrun`, 32 CPUs, 900G of RAM, an 850G Java heap, and 3 days. It loads `apps/jdk/11.0.5`. Confirm those limits and available scratch space before submitting:
+The submit script requests `amd_2021`, QOS `longrun`, 32 CPUs, 980G of RAM, an 850G Java heap, and 3 days. It loads `apps/jdk/11.0.5`. This uses the largest practical memory request on the partition's 1 TB nodes; AAM may still exceed the no-AAM run's memory use. Confirm available scratch space before submitting:
 
 ```bash
 sbatch scripts/submit-aam-drt.sbatch

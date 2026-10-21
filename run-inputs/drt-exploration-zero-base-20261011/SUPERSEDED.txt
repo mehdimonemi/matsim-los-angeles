@@ -1,0 +1,2 @@
+Do not launch this intermediate draft. It predates the iteration-zero DRT request-duration correction.
+Use C:/Matsim/matsim-los-angeles/run-inputs/drt-exploration-zero-base-20261012 instead.

@@ -15,7 +15,7 @@ public final class ScheduledAamConfigGroup extends ReflectiveConfigGroup {
     private double serviceEndTime = 24 * 3600;
     private double headway = 15 * 60;
     private double dwellTime = 60;
-    private double cruiseSpeed = 100 * 1609.344 / 3600;
+    private double cruiseSpeed = 98 * org.matsim.run.aam.AamMissionProfile.KNOTS_TO_METERS_PER_SECOND;
     private int seats = 4;
     private boolean innovationEnabled = true;
     private boolean seedAlternativesAtStartup = true;
@@ -30,7 +30,7 @@ public final class ScheduledAamConfigGroup extends ReflectiveConfigGroup {
     @StringSetter("frequencyAllocationFile") public void setFrequencyAllocationFile(String v){frequencyAllocationFile=v;}
     @StringGetter("queuePriorsFile") public String getQueuePriorsFile(){return queuePriorsFile;}
     @StringSetter("queuePriorsFile") public void setQueuePriorsFile(String v){queuePriorsFile=v;}
-    private double baseFare=30, farePerMile=2;
+    private double baseFare=0, farePerMile=2;
     @StringGetter("maximumWalkDistance") public double getMaximumWalkDistance(){return maximumWalkDistance;}
     @StringSetter("maximumWalkDistance") public void setMaximumWalkDistance(double v){maximumWalkDistance=nonnegative("maximumWalkDistance",v);}
     @StringGetter("maximumWalkTime") public double getMaximumWalkTime(){return maximumWalkTime;}

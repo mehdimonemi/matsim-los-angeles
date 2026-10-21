@@ -1,0 +1,467 @@
+{
+  "aam_opportunity_in_final_plan_memory": {
+    "all_agents": 19123,
+    "passenger_agents": 18659,
+    "freight_agents_excluded_from_aam_innovation": 464,
+    "passengers_with_any_aam_marker_plan": 7812,
+    "passengers_with_any_genuine_aircraft_plan": 3935,
+    "passengers_with_only_marker_ground_fallbacks": 3877,
+    "passengers_with_no_aam_marker_plan": 10847,
+    "share_passengers_with_a_genuine_aircraft_plan_pct": 21.089018704110618
+  },
+  "state_distinction": {
+    "actually_executed_aam_users_iteration_9": 440,
+    "actually_executed_aam_trips_iteration_9": 441,
+    "reported_selected_aam_marker_users": 3033,
+    "selected_plans_with_a_genuine_aircraft_leg": 441,
+    "selected_aam_marker_plans_that_are_ground_ride_fallbacks": 2592,
+    "genuine_air_plan_users_served": 440,
+    "genuine_air_plan_users_not_served": 1
+  },
+  "daily_trips_actual_aam_users": {
+    "total_trips_per_user": {
+      "mean": 5.802272727272728,
+      "median": 5.0,
+      "p25": 4.0,
+      "p75": 7.0,
+      "min": 2,
+      "max": 17
+    },
+    "aam_trips_per_user": {
+      "mean": 1.0022727272727272,
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0,
+      "min": 1,
+      "max": 2
+    },
+    "non_aam_trips_per_user": {
+      "mean": 4.8,
+      "median": 4.0,
+      "p25": 3.0,
+      "p75": 6.0,
+      "min": 0,
+      "max": 16
+    },
+    "non_aam_trip_count_distribution_users": {
+      "0": 1,
+      "1": 48,
+      "2": 54,
+      "3": 65,
+      "4": 61,
+      "5": 62,
+      "6": 42,
+      "7": 27,
+      "8": 28,
+      "9": 21,
+      "10": 10,
+      "11": 9,
+      "12": 8,
+      "13": 1,
+      "14": 1,
+      "15": 1,
+      "16": 1
+    },
+    "all_trip_modes": [
+      [
+        "ride",
+        1930
+      ],
+      [
+        "aam",
+        441
+      ],
+      [
+        "walk",
+        87
+      ],
+      [
+        "pt",
+        39
+      ],
+      [
+        "ride_taxi",
+        29
+      ],
+      [
+        "pt_with_access_egress_pt",
+        11
+      ],
+      [
+        "ride_school_bus",
+        10
+      ],
+      [
+        "car",
+        4
+      ],
+      [
+        "bike",
+        2
+      ]
+    ],
+    "non_aam_trip_modes": [
+      [
+        "ride",
+        1930
+      ],
+      [
+        "walk",
+        87
+      ],
+      [
+        "pt",
+        39
+      ],
+      [
+        "ride_taxi",
+        29
+      ],
+      [
+        "pt_with_access_egress_pt",
+        11
+      ],
+      [
+        "ride_school_bus",
+        10
+      ],
+      [
+        "car",
+        4
+      ],
+      [
+        "bike",
+        2
+      ]
+    ]
+  },
+  "home_and_return_behavior": {
+    "aam_trip_directions": {
+      "non-home \u2192 home": 241,
+      "home \u2192 non-home": 78,
+      "non-home \u2192 non-home": 122
+    },
+    "all_homebound_trip_modes_for_aam_users": {
+      "ride": 486,
+      "aam": 241,
+      "ride_taxi": 13,
+      "walk": 31,
+      "ride_school_bus": 2,
+      "pt": 10,
+      "car": 2,
+      "bike": 1
+    },
+    "next_home_return_after_aam_departure_from_home": {
+      "ride": 66,
+      "ride_taxi": 3,
+      "walk": 3,
+      "pt": 5,
+      "aam": 1
+    },
+    "people_with_identified_later_home_return": 78,
+    "aam_home_departures_without_later_home_arrival": 0
+  },
+  "executed_feeders": {
+    "access_leg_modes": {
+      "walk": 780,
+      "ride": 352,
+      "ride_taxi": 68,
+      "car": 1
+    },
+    "egress_leg_modes": {
+      "ride": 429,
+      "walk": 792,
+      "ride_taxi": 10,
+      "car": 1
+    },
+    "access_sequences": {
+      "walk + ride + walk": 284,
+      "walk + ride": 64,
+      "walk + ride_taxi + walk": 56,
+      "walk": 20,
+      "walk + ride_taxi": 10,
+      "ride + walk": 3,
+      "walk + car + walk": 1,
+      "ride_taxi": 1,
+      "ride": 1,
+      "ride_taxi + walk": 1
+    },
+    "egress_sequences": {
+      "walk + ride + walk": 342,
+      "ride + walk": 83,
+      "walk + ride_taxi + walk": 8,
+      "walk + ride": 4,
+      "ride_taxi + walk": 2,
+      "walk + car + walk": 1,
+      "walk": 1
+    }
+  },
+  "plan_choice_for_actual_aam_users": {
+    "users": 440,
+    "users_with_scored_aam_and_ground_options": 440,
+    "plans_per_user": {
+      "mean": 4.984090909090909,
+      "median": 5.0,
+      "p25": 5.0,
+      "p75": 5.0,
+      "min": 3,
+      "max": 5
+    },
+    "post_iteration_selected_plan": {
+      "AAM": 440,
+      "ground": 0
+    },
+    "best_aam_minus_best_ground_score": {
+      "mean": -107.90406955948718,
+      "median": -76.56525871553913,
+      "p25": -138.9830514458077,
+      "p75": -35.896094644434186,
+      "min": -1908.9999881443036,
+      "max": 1290.9279473549364
+    },
+    "selected_aam_minus_best_ground_score": {
+      "mean": -111.58948377147384,
+      "median": -80.22826693682896,
+      "p25": -149.43356371532133,
+      "p75": -36.62128806542043,
+      "min": -1920.5850525003102,
+      "max": 1290.9279473549364
+    },
+    "share_best_aam_score_above_best_ground_pct": 15.454545454545455,
+    "share_selected_aam_score_above_best_ground_pct": 15.227272727272727,
+    "executed_score_minus_best_ground_score": {
+      "mean": -111.58948377147384,
+      "median": -80.22826693682896,
+      "p25": -149.43356371532133,
+      "p75": -36.62128806542043,
+      "min": -1920.5850525003102,
+      "max": 1290.9279473549364
+    },
+    "best_ground_plan_signatures": [
+      [
+        "car",
+        250
+      ],
+      [
+        "ride",
+        100
+      ],
+      [
+        "car+ride",
+        26
+      ],
+      [
+        "ride+car",
+        18
+      ],
+      [
+        "pt",
+        13
+      ],
+      [
+        "ride+pt",
+        7
+      ],
+      [
+        "pt+ride",
+        5
+      ],
+      [
+        "car+pt",
+        3
+      ],
+      [
+        "ride_taxi",
+        2
+      ],
+      [
+        "bike+car",
+        2
+      ],
+      [
+        "ride+ride_taxi",
+        2
+      ],
+      [
+        "ride+ride_school_bus",
+        1
+      ],
+      [
+        "car+ride_taxi",
+        1
+      ],
+      [
+        "bike",
+        1
+      ],
+      [
+        "ride_taxi+pt",
+        1
+      ],
+      [
+        "car+ride_taxi+pt+ride",
+        1
+      ],
+      [
+        "ride_taxi+car",
+        1
+      ],
+      [
+        "car+ride+pt",
+        1
+      ],
+      [
+        "ride_school_bus+ride",
+        1
+      ],
+      [
+        "pt+bike",
+        1
+      ],
+      [
+        "pt+ride+car",
+        1
+      ],
+      [
+        "ride_school_bus",
+        1
+      ],
+      [
+        "pt+car",
+        1
+      ]
+    ],
+    "aam_plan_private_vehicle_parking_attributes": {
+      "car": 4
+    }
+  },
+  "plan_choice_for_selected_genuine_aam_users": {
+    "users": 441,
+    "users_with_scored_aam_and_ground_options": 441,
+    "plans_per_user": {
+      "mean": 4.984126984126984,
+      "median": 5,
+      "p25": 5,
+      "p75": 5,
+      "min": 3,
+      "max": 5
+    },
+    "post_iteration_selected_plan": {
+      "AAM": 441,
+      "ground": 0
+    },
+    "best_aam_minus_best_ground_score": {
+      "mean": -110.55529601542374,
+      "median": -76.5861462777773,
+      "p25": -141.61214773960734,
+      "p75": -36.28449480650961,
+      "min": -1908.9999881443036,
+      "max": 1290.9279473549364
+    },
+    "selected_aam_minus_best_ground_score": {
+      "mean": -114.23235327908388,
+      "median": -80.94587229261747,
+      "p25": -150.30554705482717,
+      "p75": -36.73355248505737,
+      "min": -1920.5850525003102,
+      "max": 1290.9279473549364
+    },
+    "share_best_aam_score_above_best_ground_pct": 15.419501133786849,
+    "share_selected_aam_score_above_best_ground_pct": 15.192743764172336,
+    "executed_score_minus_best_ground_score": null,
+    "best_ground_plan_signatures": [
+      [
+        "car",
+        251
+      ],
+      [
+        "ride",
+        100
+      ],
+      [
+        "car+ride",
+        26
+      ],
+      [
+        "ride+car",
+        18
+      ],
+      [
+        "pt",
+        13
+      ],
+      [
+        "ride+pt",
+        7
+      ],
+      [
+        "pt+ride",
+        5
+      ],
+      [
+        "car+pt",
+        3
+      ],
+      [
+        "ride_taxi",
+        2
+      ],
+      [
+        "bike+car",
+        2
+      ],
+      [
+        "ride+ride_taxi",
+        2
+      ],
+      [
+        "ride+ride_school_bus",
+        1
+      ],
+      [
+        "car+ride_taxi",
+        1
+      ],
+      [
+        "bike",
+        1
+      ],
+      [
+        "ride_taxi+pt",
+        1
+      ],
+      [
+        "car+ride_taxi+pt+ride",
+        1
+      ],
+      [
+        "ride_taxi+car",
+        1
+      ],
+      [
+        "car+ride+pt",
+        1
+      ],
+      [
+        "ride_school_bus+ride",
+        1
+      ],
+      [
+        "pt+bike",
+        1
+      ],
+      [
+        "pt+ride+car",
+        1
+      ],
+      [
+        "ride_school_bus",
+        1
+      ],
+      [
+        "pt+car",
+        1
+      ]
+    ]
+  }
+}

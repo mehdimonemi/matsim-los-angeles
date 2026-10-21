@@ -32,6 +32,7 @@ import org.matsim.pt.transitSchedule.api.TransitStopFacility;
 import org.matsim.vehicles.Vehicle;
 import org.matsim.vehicles.VehicleType;
 import org.matsim.vehicles.Vehicles;
+import org.matsim.run.aam.AamMissionProfile;
 
 /** Adds a complete, directed AAM timetable to an existing public-transit scenario. */
 public final class ScheduledAamTransitBuilder {
@@ -113,7 +114,10 @@ public final class ScheduledAamTransitBuilder {
                 configureAirLink(flight, distance, config.getCruiseSpeed());
                 network.addLink(flight);
 
-                double flightTime = Math.ceil(distance / config.getCruiseSpeed());
+                if (!AamMissionProfile.isFeasible(distance)) {
+                    continue;
+                }
+                double flightTime = AamMissionProfile.flightTimeSeconds(distance);
                 List<TransitRouteStop> stops = new ArrayList<>();
                 stops.add(scheduleFactory.createTransitRouteStop(origin.stop, 0, 0));
                 stops.add(scheduleFactory.createTransitRouteStop(destination.stop, flightTime, flightTime + config.getDwellTime()));

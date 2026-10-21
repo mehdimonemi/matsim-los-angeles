@@ -100,6 +100,7 @@ def run(manifest, output, simulate=run_stage, optimize=optimize_population,resum
         directory=output/name
         execution_name=name
         clean=output/(name+"-input.xml.gz")
+        reused_final=False
         if resume and (directory.exists() or clean.exists()):
             # The OS may have stopped MATSim or population serialization in
             # the middle of a stage. Retain those artifacts and regenerate
@@ -111,6 +112,22 @@ def run(manifest, output, simulate=run_stage, optimize=optimize_population,resum
                 clean=output/(execution_name+"-input.xml.gz")
                 if not directory.exists() and not clean.exists() and not Path(str(clean)+".observed-plans.jsonl").exists():break
                 retry+=1
+        if resume and final:
+            # MATSim may have completed this pass before the process stopped
+            # during post-processing. Reuse its plans and wait priors.
+            candidates=sorted(output.glob(name+"-resume-*"),reverse=True)+[output/name]
+            for candidate in candidates:
+                plans=list(candidate.glob("*.output_plans.xml.gz"))
+                experienced=list(candidate.glob("*.output_experienced_plans.xml.gz"))
+                events=list(candidate.glob("*.output_events.xml.gz"))
+                candidate_waits=Path(str(candidate)+"-inputs")/"wait-priors.csv"
+                if len(plans)==1 and len(experienced)==1 and len(events)==1 and candidate_waits.is_file():
+                    directory=candidate;checkpoint=plans[0];waits=candidate_waits
+                    elapsed=0
+                    provenance=dict(reusedCompletedStage=str(candidate.resolve()))
+                    reused_final=True
+                    print(f"Reusing completed final convergence output: {candidate.name}",flush=True)
+                    break
         if stage==1 and resume_stage_one is not None:
             directory=resume_stage_one/"stage-01"
             matches=list(directory.glob("*.output_plans.xml.gz"))
@@ -120,6 +137,8 @@ def run(manifest, output, simulate=run_stage, optimize=optimize_population,resum
             if not waits.is_file():raise ValueError("Completed stage-one waiting observations required")
             elapsed=0;provenance=dict(reusedCompletedStage=str(directory),sourceLayoutId=layout_id)
             print("Reusing five completed stage-one iterations; recomputing optimizer with corrected objective",flush=True)
+        elif reused_final:
+            pass
         else:
             if resume and clean.is_file():
                 # A restart can occur after deterministic population cleanup
@@ -138,7 +157,8 @@ def run(manifest, output, simulate=run_stage, optimize=optimize_population,resum
             checkpoint,waits,elapsed=simulate(args,directory,clean,layout,waits,iterations,False,not final)
         checkpoint_layout_id=layout_id
         record=dict(stage=stage,phase="convergence" if final else "search",matsimIterations=iterations,
-                    matsimSeconds=elapsed,layoutId=layout_id,layout=str(layout.resolve()),provenance=provenance)
+                    matsimSeconds=elapsed,layoutId=layout_id,layout=str(layout.resolve()),provenance=provenance,
+                    simulationOutput=str(directory.resolve()))
         # Use experienced plans for executed selected counts, output plans for
         # retained alternatives/optimizer coefficients. Never conflate snapshots.
         experienced=list(directory.glob("*.output_experienced_plans.xml.gz"))
@@ -166,20 +186,59 @@ def run(manifest, output, simulate=run_stage, optimize=optimize_population,resum
                               optimalityScope=f"analytical current-stage surrogate, {method} evaluated swap neighborhood; not MATSim optimality")
             record["optimization"]=prediction
             layout=next_layout;layout_id=hashlib.sha256(layout.read_bytes()).hexdigest()
-        dump(output/(name+"-decision.json"),record);history.append(record)
+        decision_name=(directory.name+"-decision.json"
+                       if resume and final and directory.name!=name
+                       else name+"-decision.json")
+        decision_path=output/decision_name
+        if not (resume and final and decision_path.is_file()):
+            dump(decision_path,record)
+        history.append(record)
     convergence=assess(directory)
     tail_done=tail_iterations
     maximum_tail=m.get('maximumConvergenceIterations',tail_iterations)
+    if resume:
+        # Convergence extensions commit their own decision after MATSim and
+        # metric extraction complete. Reuse those checkpoints after a restart
+        # so a later interruption does not repeat already committed iterations.
+        while tail_done<maximum_tail:
+            name=f'convergence-extension-{tail_done:03d}'
+            decision_path=output/(name+'-decision.json')
+            if not decision_path.is_file():break
+            prior=json.loads(decision_path.read_text(encoding='utf-8'))
+            recorded_dir=prior.get('simulationOutput')
+            extension_dir=Path(recorded_dir) if recorded_dir else output/name
+            plans=list(extension_dir.glob('*.output_plans.xml.gz'))
+            extension_waits=Path(str(extension_dir)+'-inputs')/'wait-priors.csv'
+            if len(plans)!=1 or not extension_waits.is_file():
+                raise ValueError(f'Cannot resume: committed convergence output is incomplete for {name}')
+            checkpoint=plans[0];waits=extension_waits
+            convergence=prior.get('convergence',assess(extension_dir))
+            history.append(prior)
+            tail_done+=prior.get('matsimIterations',10)
+            directory=extension_dir
     while not convergence['stable'] and tail_done<maximum_tail:
         iterations=min(10,maximum_tail-tail_done)
-        name=f'convergence-extension-{tail_done:03d}';directory=output/name
-        clean=output/(name+'-input.xml.gz')
+        name=f'convergence-extension-{tail_done:03d}'
+        execution_name=name
+        directory=output/execution_name
+        clean=output/(execution_name+'-input.xml.gz')
+        if resume and (directory.exists() or clean.exists() or Path(str(clean)+'.observed-plans.jsonl').exists()):
+            # A previous run may have filled the disk mid-iteration. Keep its
+            # partial files for diagnosis and retry under a fresh namespace.
+            retry=1
+            while True:
+                execution_name=f'{name}-resume-{retry:02d}'
+                directory=output/execution_name
+                clean=output/(execution_name+'-input.xml.gz')
+                if (not directory.exists() and not clean.exists()
+                        and not Path(str(clean)+'.observed-plans.jsonl').exists()):break
+                retry+=1
         provenance=sanitize_population(checkpoint,clean,layout_id,preserve_learning=True,previous_layout_id=layout_id)
         checkpoint,waits,elapsed=simulate(args,directory,clean,layout,waits,iterations,False,False)
         tail_done+=iterations
         record=dict(stage=len(history)+1,phase='convergence',matsimIterations=iterations,matsimSeconds=elapsed,
                     layoutId=layout_id,layout=str(layout.resolve()),provenance=provenance,
-                    retainedPlanMetrics=population_score_metrics(checkpoint))
+                    simulationOutput=str(directory.resolve()),retainedPlanMetrics=population_score_metrics(checkpoint))
         experienced=list(directory.glob('*.output_experienced_plans.xml.gz'));events=list(directory.glob('*.output_events.xml.gz'))
         if len(experienced)==1 and len(events)==1:
             record['journeyMetrics'],_=funnel(events[0],experienced[0],service='drt',passenger_ids=set(m['eligibleIds']))

@@ -1,0 +1,4588 @@
+{
+  "metrics": [
+    {
+      "method": "global",
+      "completed_users": 1502,
+      "completed_trips": 1502,
+      "aam_trip_share_pct": 2.0991726296958855,
+      "final_result_users": 1502,
+      "completion_ratio_pct": 100.0,
+      "rides": 1502,
+      "rejections": 0,
+      "rejection_rate_pct": 0.0,
+      "wait_mean_min": 4.481380381713271,
+      "wait_median_min": 3.566666666666667,
+      "wait_p95_min": 11.761666666666672,
+      "wait_le_10_pct": 92.21038615179761,
+      "wait_le_15_pct": 99.93342210386152,
+      "air_onboard_mean_min": 2.5098868175765645,
+      "air_distance_mean_miles": 4.23600821667507,
+      "fare_mean_usd": 8.47201643335014,
+      "fare_p95_usd": 13.462628251014078,
+      "ground_mean_min": 33.57979360852197,
+      "ground_median_min": 32.45,
+      "ground_distance_mean_miles": 20.399468965423022,
+      "journey_mean_min": 40.571060807811804,
+      "journey_median_min": 38.958333333333336,
+      "journey_p95_min": 64.51166666666667,
+      "journey_gt_6h_pct": 0.0,
+      "fleet_vehicles": 100,
+      "fleet_total_km": 5079.49866,
+      "fleet_empty_km": 32.5427,
+      "fleet_empty_ratio_pct": 1.0,
+      "vehicle_km_per_ride": 3.3818233422103865,
+      "rides_per_vehicle": 15.02,
+      "passenger_km_per_vehicle_km": 2.02,
+      "occupancy_0_pct": 0.6406675587953943,
+      "occupancy_1_pct": 45.63497226246925,
+      "occupancy_2_pct": 24.33742727739479,
+      "occupancy_3_pct": 10.256215935799098,
+      "occupancy_4_pct": 19.130716965541474,
+      "income_user_median_usd": 55714.0,
+      "income_population_median_usd": 65641.0,
+      "income_user_ge_100k_pct": 25.335120643431637,
+      "income_user_lt_50k_pct": 43.833780160857906,
+      "corridors_used": 25,
+      "top3_corridor_share_pct": 47.86950732356858,
+      "final_aam_score_mean": 43.37726217246124,
+      "population_score_mean": 93.49589314618588,
+      "accepted_swaps": 7,
+      "moves_evaluated": 7200,
+      "optimizer_seconds": 2756.701352200005,
+      "wall_minutes": 667.695098506667,
+      "original_sites_retained": 3,
+      "new_sites": 7
+    },
+    {
+      "method": "all-vp-k10",
+      "completed_users": 1492,
+      "completed_trips": 1492,
+      "aam_trip_share_pct": 2.0849928031414637,
+      "final_result_users": 1492,
+      "completion_ratio_pct": 100.0,
+      "rides": 1492,
+      "rejections": 1,
+      "rejection_rate_pct": 0.06697923643670463,
+      "wait_mean_min": 4.898771224307417,
+      "wait_median_min": 4.0,
+      "wait_p95_min": 12.181666666666668,
+      "wait_le_10_pct": 88.06970509383378,
+      "wait_le_15_pct": 99.93297587131367,
+      "air_onboard_mean_min": 2.3718163538873998,
+      "air_distance_mean_miles": 4.128932859846485,
+      "fare_mean_usd": 8.25786571969297,
+      "fare_p95_usd": 13.462628251014078,
+      "ground_mean_min": 35.35005585344057,
+      "ground_median_min": 34.30833333333334,
+      "ground_distance_mean_miles": 22.034314326184944,
+      "journey_mean_min": 42.620643431635386,
+      "journey_median_min": 41.15833333333333,
+      "journey_p95_min": 68.79833333333333,
+      "journey_gt_6h_pct": 0.0,
+      "fleet_vehicles": 100,
+      "fleet_total_km": 4632.74209,
+      "fleet_empty_km": 50.76896,
+      "fleet_empty_ratio_pct": 1.0,
+      "vehicle_km_per_ride": 3.105055020107238,
+      "rides_per_vehicle": 14.92,
+      "passenger_km_per_vehicle_km": 2.14,
+      "occupancy_0_pct": 1.0958727877383891,
+      "occupancy_1_pct": 46.414901446812685,
+      "occupancy_2_pct": 16.162226470582073,
+      "occupancy_3_pct": 10.031736064047251,
+      "occupancy_4_pct": 26.2952632308196,
+      "income_user_median_usd": 54920.0,
+      "income_population_median_usd": 65641.0,
+      "income_user_ge_100k_pct": 24.56021650879567,
+      "income_user_lt_50k_pct": 43.843031123139376,
+      "corridors_used": 21,
+      "top3_corridor_share_pct": 58.78016085790885,
+      "final_aam_score_mean": 33.96433187209765,
+      "population_score_mean": 92.1077485315965,
+      "accepted_swaps": 8,
+      "moves_evaluated": 800,
+      "optimizer_seconds": 570.0789291000692,
+      "wall_minutes": 712.745721766666,
+      "original_sites_retained": 4,
+      "new_sites": 6
+    },
+    {
+      "method": "one-vp-k10",
+      "completed_users": 1410,
+      "completed_trips": 1410,
+      "aam_trip_share_pct": 1.9705121934176508,
+      "final_result_users": 1410,
+      "completion_ratio_pct": 100.0,
+      "rides": 1410,
+      "rejections": 0,
+      "rejection_rate_pct": 0.0,
+      "wait_mean_min": 5.558794326241134,
+      "wait_median_min": 4.975,
+      "wait_p95_min": 12.594166666666665,
+      "wait_le_10_pct": 84.39716312056737,
+      "wait_le_15_pct": 99.9290780141844,
+      "air_onboard_mean_min": 2.6949408983451537,
+      "air_distance_mean_miles": 4.353658852161533,
+      "fare_mean_usd": 8.707317704323065,
+      "fare_p95_usd": 19.868840968742518,
+      "ground_mean_min": 37.30353427895981,
+      "ground_median_min": 36.28333333333333,
+      "ground_distance_mean_miles": 25.278142491819406,
+      "journey_mean_min": 45.5572695035461,
+      "journey_median_min": 44.625,
+      "journey_p95_min": 73.37583333333333,
+      "journey_gt_6h_pct": 0.0,
+      "fleet_vehicles": 100,
+      "fleet_total_km": 4414.58416,
+      "fleet_empty_km": 20.613709999999998,
+      "fleet_empty_ratio_pct": 0.0,
+      "vehicle_km_per_ride": 3.1309107517730497,
+      "rides_per_vehicle": 14.1,
+      "passenger_km_per_vehicle_km": 2.24,
+      "occupancy_0_pct": 0.4669456804895201,
+      "occupancy_1_pct": 45.880244235462136,
+      "occupancy_2_pct": 12.849682115585,
+      "occupancy_3_pct": 10.991438230937336,
+      "occupancy_4_pct": 29.811689737526013,
+      "income_user_median_usd": 55946.0,
+      "income_population_median_usd": 65641.0,
+      "income_user_ge_100k_pct": 24.74964234620887,
+      "income_user_lt_50k_pct": 44.13447782546495,
+      "corridors_used": 21,
+      "top3_corridor_share_pct": 65.31914893617021,
+      "final_aam_score_mean": 36.96885836457141,
+      "population_score_mean": 91.87802880118706,
+      "accepted_swaps": 8,
+      "moves_evaluated": 80,
+      "optimizer_seconds": 252.17311390000395,
+      "wall_minutes": 59.11454663666664,
+      "original_sites_retained": 5,
+      "new_sites": 5
+    },
+    {
+      "method": "adaptive",
+      "completed_users": 1362,
+      "completed_trips": 1362,
+      "aam_trip_share_pct": 1.9035639412997905,
+      "final_result_users": 1362,
+      "completion_ratio_pct": 100.0,
+      "rides": 1362,
+      "rejections": 1,
+      "rejection_rate_pct": 0.07336757153338225,
+      "wait_mean_min": 5.144884973078805,
+      "wait_median_min": 4.483333333333333,
+      "wait_p95_min": 12.266666666666667,
+      "wait_le_10_pct": 87.59177679882525,
+      "wait_le_15_pct": 100.0,
+      "air_onboard_mean_min": 2.4922418012726384,
+      "air_distance_mean_miles": 4.293255216262431,
+      "fare_mean_usd": 8.586510432524863,
+      "fare_p95_usd": 18.35654776107532,
+      "ground_mean_min": 36.262787567302986,
+      "ground_median_min": 35.425,
+      "ground_distance_mean_miles": 23.785861585229192,
+      "journey_mean_min": 43.89991434165443,
+      "journey_median_min": 43.06666666666666,
+      "journey_p95_min": 69.78166666666667,
+      "journey_gt_6h_pct": 0.0,
+      "fleet_vehicles": 100,
+      "fleet_total_km": 4259.36974,
+      "fleet_empty_km": 45.37411,
+      "fleet_empty_ratio_pct": 1.0,
+      "vehicle_km_per_ride": 3.127290558002937,
+      "rides_per_vehicle": 13.62,
+      "passenger_km_per_vehicle_km": 2.21,
+      "occupancy_0_pct": 1.0652775591160584,
+      "occupancy_1_pct": 46.29363991302619,
+      "occupancy_2_pct": 13.186546937341017,
+      "occupancy_3_pct": 9.533736322219353,
+      "occupancy_4_pct": 29.92079926829738,
+      "income_user_median_usd": 54711.5,
+      "income_population_median_usd": 65641.0,
+      "income_user_ge_100k_pct": 24.88888888888889,
+      "income_user_lt_50k_pct": 44.74074074074074,
+      "corridors_used": 21,
+      "top3_corridor_share_pct": 69.67694566813509,
+      "final_aam_score_mean": 33.97455762007738,
+      "population_score_mean": 91.6933062996272,
+      "accepted_swaps": 8,
+      "moves_evaluated": 400,
+      "optimizer_seconds": 280.8933588000946,
+      "wall_minutes": 477.5719393983328,
+      "original_sites_retained": 5,
+      "new_sites": 5
+    }
+  ],
+  "stages": [
+    {
+      "method": "global",
+      "stage": 1,
+      "aam_users": 12474,
+      "aam_trips": 26192,
+      "predicted_improvement": 10503.825803295244,
+      "accepted": true,
+      "moves_evaluated": 900,
+      "optimizer_seconds": 328.74135140003636
+    },
+    {
+      "method": "global",
+      "stage": 2,
+      "aam_users": 12550,
+      "aam_trips": 25823,
+      "predicted_improvement": 6624.95177574642,
+      "accepted": true,
+      "moves_evaluated": 900,
+      "optimizer_seconds": 328.66780589998234
+    },
+    {
+      "method": "global",
+      "stage": 3,
+      "aam_users": 12659,
+      "aam_trips": 25378,
+      "predicted_improvement": 5652.1691892626695,
+      "accepted": true,
+      "moves_evaluated": 900,
+      "optimizer_seconds": 337.250983200036
+    },
+    {
+      "method": "global",
+      "stage": 4,
+      "aam_users": 12623,
+      "aam_trips": 25378,
+      "predicted_improvement": 2637.6470529767685,
+      "accepted": true,
+      "moves_evaluated": 900,
+      "optimizer_seconds": 340.0411229999736
+    },
+    {
+      "method": "global",
+      "stage": 5,
+      "aam_users": 11911,
+      "aam_trips": 27367,
+      "predicted_improvement": 1365.7538349968381,
+      "accepted": true,
+      "moves_evaluated": 900,
+      "optimizer_seconds": 364.1438090999727
+    },
+    {
+      "method": "global",
+      "stage": 6,
+      "aam_users": 11891,
+      "aam_trips": 27423,
+      "predicted_improvement": 1037.9827031458262,
+      "accepted": true,
+      "moves_evaluated": 900,
+      "optimizer_seconds": 366.6256963000051
+    },
+    {
+      "method": "global",
+      "stage": 7,
+      "aam_users": 11912,
+      "aam_trips": 27313,
+      "predicted_improvement": 724.1946755847894,
+      "accepted": true,
+      "moves_evaluated": 900,
+      "optimizer_seconds": 366.3617859999649
+    },
+    {
+      "method": "global",
+      "stage": 8,
+      "aam_users": 13096,
+      "aam_trips": 23641,
+      "predicted_improvement": 0.0,
+      "accepted": false,
+      "moves_evaluated": 900,
+      "optimizer_seconds": 324.8687973000342
+    },
+    {
+      "method": "all-vp-k10",
+      "stage": 1,
+      "aam_users": 12474,
+      "aam_trips": 26192,
+      "predicted_improvement": 10503.825803295244,
+      "accepted": true,
+      "moves_evaluated": 100,
+      "optimizer_seconds": 59.56626640004106
+    },
+    {
+      "method": "all-vp-k10",
+      "stage": 2,
+      "aam_users": 12550,
+      "aam_trips": 25823,
+      "predicted_improvement": 6252.818614928983,
+      "accepted": true,
+      "moves_evaluated": 100,
+      "optimizer_seconds": 65.80151040002238
+    },
+    {
+      "method": "all-vp-k10",
+      "stage": 3,
+      "aam_users": 12586,
+      "aam_trips": 25621,
+      "predicted_improvement": 3309.677165177185,
+      "accepted": true,
+      "moves_evaluated": 100,
+      "optimizer_seconds": 70.80248690000735
+    },
+    {
+      "method": "all-vp-k10",
+      "stage": 4,
+      "aam_users": 12673,
+      "aam_trips": 25266,
+      "predicted_improvement": 2528.6725050224923,
+      "accepted": true,
+      "moves_evaluated": 100,
+      "optimizer_seconds": 73.3431054999819
+    },
+    {
+      "method": "all-vp-k10",
+      "stage": 5,
+      "aam_users": 13010,
+      "aam_trips": 24073,
+      "predicted_improvement": 1168.0094009845052,
+      "accepted": true,
+      "moves_evaluated": 100,
+      "optimizer_seconds": 74.04321450000862
+    },
+    {
+      "method": "all-vp-k10",
+      "stage": 6,
+      "aam_users": 13035,
+      "aam_trips": 23951,
+      "predicted_improvement": 943.4699901859276,
+      "accepted": true,
+      "moves_evaluated": 100,
+      "optimizer_seconds": 75.14061790000414
+    },
+    {
+      "method": "all-vp-k10",
+      "stage": 7,
+      "aam_users": 12964,
+      "aam_trips": 24135,
+      "predicted_improvement": 301.81463652383536,
+      "accepted": true,
+      "moves_evaluated": 100,
+      "optimizer_seconds": 75.09829469997203
+    },
+    {
+      "method": "all-vp-k10",
+      "stage": 8,
+      "aam_users": 13023,
+      "aam_trips": 23970,
+      "predicted_improvement": 388.48259530821815,
+      "accepted": true,
+      "moves_evaluated": 100,
+      "optimizer_seconds": 76.28343280003173
+    },
+    {
+      "method": "one-vp-k10",
+      "stage": 1,
+      "aam_users": 12474,
+      "aam_trips": 26192,
+      "predicted_improvement": 10503.825803295244,
+      "accepted": true,
+      "moves_evaluated": 10,
+      "optimizer_seconds": 30.930622199957725
+    },
+    {
+      "method": "one-vp-k10",
+      "stage": 2,
+      "aam_users": 12550,
+      "aam_trips": 25823,
+      "predicted_improvement": 6252.818614928983,
+      "accepted": true,
+      "moves_evaluated": 10,
+      "optimizer_seconds": 37.83015289995819
+    },
+    {
+      "method": "one-vp-k10",
+      "stage": 3,
+      "aam_users": 12586,
+      "aam_trips": 25621,
+      "predicted_improvement": 859.4899009955116,
+      "accepted": true,
+      "moves_evaluated": 10,
+      "optimizer_seconds": 30.006739199976437
+    },
+    {
+      "method": "one-vp-k10",
+      "stage": 4,
+      "aam_users": 12621,
+      "aam_trips": 25433,
+      "predicted_improvement": 306.7767111980356,
+      "accepted": true,
+      "moves_evaluated": 10,
+      "optimizer_seconds": 28.024628400045913
+    },
+    {
+      "method": "one-vp-k10",
+      "stage": 5,
+      "aam_users": 12634,
+      "aam_trips": 25381,
+      "predicted_improvement": 56.37309860158712,
+      "accepted": true,
+      "moves_evaluated": 10,
+      "optimizer_seconds": 28.554010300023947
+    },
+    {
+      "method": "one-vp-k10",
+      "stage": 6,
+      "aam_users": 12659,
+      "aam_trips": 25299,
+      "predicted_improvement": 41.70683992281556,
+      "accepted": true,
+      "moves_evaluated": 10,
+      "optimizer_seconds": 37.486317400005646
+    },
+    {
+      "method": "one-vp-k10",
+      "stage": 7,
+      "aam_users": 12702,
+      "aam_trips": 25131,
+      "predicted_improvement": 54.07460811827332,
+      "accepted": true,
+      "moves_evaluated": 10,
+      "optimizer_seconds": 29.40636419999646
+    },
+    {
+      "method": "one-vp-k10",
+      "stage": 8,
+      "aam_users": 12834,
+      "aam_trips": 24655,
+      "predicted_improvement": 439.86660651117563,
+      "accepted": true,
+      "moves_evaluated": 10,
+      "optimizer_seconds": 29.934279300039634
+    },
+    {
+      "method": "adaptive",
+      "stage": 1,
+      "aam_users": 12474,
+      "aam_trips": 26192,
+      "predicted_improvement": 10503.825803295244,
+      "accepted": true,
+      "moves_evaluated": 50,
+      "optimizer_seconds": 29.891513800015673
+    },
+    {
+      "method": "adaptive",
+      "stage": 2,
+      "aam_users": 12550,
+      "aam_trips": 25823,
+      "predicted_improvement": 4535.198230501264,
+      "accepted": true,
+      "moves_evaluated": 50,
+      "optimizer_seconds": 34.88065279996954
+    },
+    {
+      "method": "adaptive",
+      "stage": 3,
+      "aam_users": 12517,
+      "aam_trips": 25825,
+      "predicted_improvement": 1413.6057674130425,
+      "accepted": true,
+      "moves_evaluated": 50,
+      "optimizer_seconds": 41.74321270000655
+    },
+    {
+      "method": "adaptive",
+      "stage": 4,
+      "aam_users": 12790,
+      "aam_trips": 24892,
+      "predicted_improvement": 1193.2812215290032,
+      "accepted": true,
+      "moves_evaluated": 50,
+      "optimizer_seconds": 33.457845799974166
+    },
+    {
+      "method": "adaptive",
+      "stage": 5,
+      "aam_users": 12724,
+      "aam_trips": 25041,
+      "predicted_improvement": 1252.9412583678495,
+      "accepted": true,
+      "moves_evaluated": 50,
+      "optimizer_seconds": 34.70840230002068
+    },
+    {
+      "method": "adaptive",
+      "stage": 6,
+      "aam_users": 12921,
+      "aam_trips": 24281,
+      "predicted_improvement": 273.02300757635385,
+      "accepted": true,
+      "moves_evaluated": 50,
+      "optimizer_seconds": 35.645825700019486
+    },
+    {
+      "method": "adaptive",
+      "stage": 7,
+      "aam_users": 13033,
+      "aam_trips": 23924,
+      "predicted_improvement": 81.6035656160675,
+      "accepted": true,
+      "moves_evaluated": 50,
+      "optimizer_seconds": 35.3980145000387
+    },
+    {
+      "method": "adaptive",
+      "stage": 8,
+      "aam_users": 13052,
+      "aam_trips": 23844,
+      "predicted_improvement": 668.7813201877289,
+      "accepted": true,
+      "moves_evaluated": 50,
+      "optimizer_seconds": 35.16789120004978
+    }
+  ],
+  "ground_modes": [
+    {
+      "method": "global",
+      "phase": "access",
+      "mode": "walk",
+      "legs": 2969,
+      "minutes": 2647.2499999999914
+    },
+    {
+      "method": "global",
+      "phase": "egress",
+      "mode": "walk",
+      "legs": 2968,
+      "minutes": 2476.983333333325
+    },
+    {
+      "method": "global",
+      "phase": "egress",
+      "mode": "ride",
+      "legs": 1386,
+      "minutes": 22631.68333333334
+    },
+    {
+      "method": "global",
+      "phase": "access",
+      "mode": "ride",
+      "legs": 1379,
+      "minutes": 21672.766666666677
+    },
+    {
+      "method": "global",
+      "phase": "access",
+      "mode": "ride_taxi",
+      "legs": 88,
+      "minutes": 493.16666666666674
+    },
+    {
+      "method": "global",
+      "phase": "egress",
+      "mode": "ride_taxi",
+      "legs": 80,
+      "minutes": 489.96666666666664
+    },
+    {
+      "method": "all-vp-k10",
+      "phase": "egress",
+      "mode": "walk",
+      "legs": 2959,
+      "minutes": 2405.2166666666567
+    },
+    {
+      "method": "all-vp-k10",
+      "phase": "access",
+      "mode": "walk",
+      "legs": 2951,
+      "minutes": 2587.9999999999973
+    },
+    {
+      "method": "all-vp-k10",
+      "phase": "egress",
+      "mode": "ride",
+      "legs": 1378,
+      "minutes": 23580.516666666652
+    },
+    {
+      "method": "all-vp-k10",
+      "phase": "access",
+      "mode": "ride",
+      "legs": 1357,
+      "minutes": 22959.933333333363
+    },
+    {
+      "method": "all-vp-k10",
+      "phase": "access",
+      "mode": "ride_taxi",
+      "legs": 102,
+      "minutes": 605.2833333333332
+    },
+    {
+      "method": "all-vp-k10",
+      "phase": "egress",
+      "mode": "ride_taxi",
+      "legs": 89,
+      "minutes": 578.4666666666666
+    },
+    {
+      "method": "one-vp-k10",
+      "phase": "egress",
+      "mode": "walk",
+      "legs": 2806,
+      "minutes": 2068.566666666646
+    },
+    {
+      "method": "one-vp-k10",
+      "phase": "access",
+      "mode": "walk",
+      "legs": 2798,
+      "minutes": 2349.99999999999
+    },
+    {
+      "method": "one-vp-k10",
+      "phase": "egress",
+      "mode": "ride",
+      "legs": 1317,
+      "minutes": 23903.11666666669
+    },
+    {
+      "method": "one-vp-k10",
+      "phase": "access",
+      "mode": "ride",
+      "legs": 1296,
+      "minutes": 23291.16666666672
+    },
+    {
+      "method": "one-vp-k10",
+      "phase": "access",
+      "mode": "ride_taxi",
+      "legs": 92,
+      "minutes": 477.16666666666674
+    },
+    {
+      "method": "one-vp-k10",
+      "phase": "egress",
+      "mode": "ride_taxi",
+      "legs": 79,
+      "minutes": 484.4666666666665
+    },
+    {
+      "method": "adaptive",
+      "phase": "access",
+      "mode": "walk",
+      "legs": 2708,
+      "minutes": 2238.3499999999817
+    },
+    {
+      "method": "adaptive",
+      "phase": "egress",
+      "mode": "walk",
+      "legs": 2708,
+      "minutes": 2022.7499999999795
+    },
+    {
+      "method": "adaptive",
+      "phase": "egress",
+      "mode": "ride",
+      "legs": 1267,
+      "minutes": 22122.683333333312
+    },
+    {
+      "method": "adaptive",
+      "phase": "access",
+      "mode": "ride",
+      "legs": 1256,
+      "minutes": 21990.533333333387
+    },
+    {
+      "method": "adaptive",
+      "phase": "access",
+      "mode": "ride_taxi",
+      "legs": 90,
+      "minutes": 505.7
+    },
+    {
+      "method": "adaptive",
+      "phase": "egress",
+      "mode": "ride_taxi",
+      "legs": 79,
+      "minutes": 487.1999999999999
+    }
+  ],
+  "corridors": [
+    {
+      "method": "global",
+      "corridor": "CAN084 \u2192 CAN011",
+      "passenger_trips": 279,
+      "share_pct": 18.575233022636485
+    },
+    {
+      "method": "global",
+      "corridor": "CAN011 \u2192 CAN084",
+      "passenger_trips": 231,
+      "share_pct": 15.379494007989347
+    },
+    {
+      "method": "global",
+      "corridor": "CAN030 \u2192 VP09",
+      "passenger_trips": 209,
+      "share_pct": 13.914780292942742
+    },
+    {
+      "method": "global",
+      "corridor": "VP09 \u2192 CAN030",
+      "passenger_trips": 203,
+      "share_pct": 13.515312916111851
+    },
+    {
+      "method": "global",
+      "corridor": "VP08 \u2192 CAN093",
+      "passenger_trips": 166,
+      "share_pct": 11.051930758988016
+    },
+    {
+      "method": "global",
+      "corridor": "CAN093 \u2192 VP08",
+      "passenger_trips": 126,
+      "share_pct": 8.388814913448735
+    },
+    {
+      "method": "global",
+      "corridor": "CAN099 \u2192 CAN044",
+      "passenger_trips": 111,
+      "share_pct": 7.390146471371505
+    },
+    {
+      "method": "global",
+      "corridor": "CAN044 \u2192 CAN099",
+      "passenger_trips": 97,
+      "share_pct": 6.458055925432756
+    },
+    {
+      "method": "global",
+      "corridor": "CAN081 \u2192 CAN050",
+      "passenger_trips": 22,
+      "share_pct": 1.4647137150466045
+    },
+    {
+      "method": "global",
+      "corridor": "CAN050 \u2192 CAN081",
+      "passenger_trips": 14,
+      "share_pct": 0.9320905459387483
+    },
+    {
+      "method": "global",
+      "corridor": "CAN044 \u2192 CAN084",
+      "passenger_trips": 6,
+      "share_pct": 0.3994673768308921
+    },
+    {
+      "method": "global",
+      "corridor": "VP09 \u2192 CAN084",
+      "passenger_trips": 5,
+      "share_pct": 0.33288948069241014
+    },
+    {
+      "method": "global",
+      "corridor": "CAN084 \u2192 CAN044",
+      "passenger_trips": 5,
+      "share_pct": 0.33288948069241014
+    },
+    {
+      "method": "global",
+      "corridor": "CAN011 \u2192 CAN030",
+      "passenger_trips": 4,
+      "share_pct": 0.2663115845539281
+    },
+    {
+      "method": "global",
+      "corridor": "CAN030 \u2192 CAN011",
+      "passenger_trips": 4,
+      "share_pct": 0.2663115845539281
+    },
+    {
+      "method": "global",
+      "corridor": "VP09 \u2192 CAN093",
+      "passenger_trips": 3,
+      "share_pct": 0.19973368841544606
+    },
+    {
+      "method": "global",
+      "corridor": "CAN030 \u2192 CAN084",
+      "passenger_trips": 3,
+      "share_pct": 0.19973368841544606
+    },
+    {
+      "method": "global",
+      "corridor": "CAN084 \u2192 VP09",
+      "passenger_trips": 3,
+      "share_pct": 0.19973368841544606
+    },
+    {
+      "method": "global",
+      "corridor": "CAN084 \u2192 CAN030",
+      "passenger_trips": 2,
+      "share_pct": 0.13315579227696406
+    },
+    {
+      "method": "global",
+      "corridor": "CAN093 \u2192 CAN030",
+      "passenger_trips": 2,
+      "share_pct": 0.13315579227696406
+    },
+    {
+      "method": "global",
+      "corridor": "VP09 \u2192 CAN011",
+      "passenger_trips": 2,
+      "share_pct": 0.13315579227696406
+    },
+    {
+      "method": "global",
+      "corridor": "CAN093 \u2192 VP09",
+      "passenger_trips": 2,
+      "share_pct": 0.13315579227696406
+    },
+    {
+      "method": "global",
+      "corridor": "CAN084 \u2192 CAN093",
+      "passenger_trips": 1,
+      "share_pct": 0.06657789613848203
+    },
+    {
+      "method": "global",
+      "corridor": "CAN030 \u2192 VP08",
+      "passenger_trips": 1,
+      "share_pct": 0.06657789613848203
+    },
+    {
+      "method": "global",
+      "corridor": "CAN011 \u2192 VP09",
+      "passenger_trips": 1,
+      "share_pct": 0.06657789613848203
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "CAN062 \u2192 CAN084",
+      "passenger_trips": 321,
+      "share_pct": 21.514745308310992
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "CAN084 \u2192 CAN062",
+      "passenger_trips": 308,
+      "share_pct": 20.64343163538874
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "CAN030 \u2192 VP09",
+      "passenger_trips": 248,
+      "share_pct": 16.621983914209114
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "VP09 \u2192 CAN030",
+      "passenger_trips": 229,
+      "share_pct": 15.348525469168901
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "VP08 \u2192 CAN093",
+      "passenger_trips": 161,
+      "share_pct": 10.79088471849866
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "CAN093 \u2192 VP08",
+      "passenger_trips": 133,
+      "share_pct": 8.914209115281501
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "CAN081 \u2192 CAN050",
+      "passenger_trips": 35,
+      "share_pct": 2.3458445040214477
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "CAN050 \u2192 CAN081",
+      "passenger_trips": 19,
+      "share_pct": 1.2734584450402144
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "CAN099 \u2192 CAN062",
+      "passenger_trips": 7,
+      "share_pct": 0.4691689008042895
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "CAN062 \u2192 CAN099",
+      "passenger_trips": 6,
+      "share_pct": 0.40214477211796246
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "CAN084 \u2192 VP09",
+      "passenger_trips": 5,
+      "share_pct": 0.3351206434316354
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "VP09 \u2192 CAN084",
+      "passenger_trips": 4,
+      "share_pct": 0.2680965147453083
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "CAN030 \u2192 CAN084",
+      "passenger_trips": 4,
+      "share_pct": 0.2680965147453083
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "CAN093 \u2192 VP09",
+      "passenger_trips": 4,
+      "share_pct": 0.2680965147453083
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "VP09 \u2192 CAN093",
+      "passenger_trips": 2,
+      "share_pct": 0.13404825737265416
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "CAN030 \u2192 CAN062",
+      "passenger_trips": 1,
+      "share_pct": 0.06702412868632708
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "CAN093 \u2192 CAN030",
+      "passenger_trips": 1,
+      "share_pct": 0.06702412868632708
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "CAN021 \u2192 CAN050",
+      "passenger_trips": 1,
+      "share_pct": 0.06702412868632708
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "CAN084 \u2192 CAN093",
+      "passenger_trips": 1,
+      "share_pct": 0.06702412868632708
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "CAN030 \u2192 VP08",
+      "passenger_trips": 1,
+      "share_pct": 0.06702412868632708
+    },
+    {
+      "method": "all-vp-k10",
+      "corridor": "VP09 \u2192 CAN062",
+      "passenger_trips": 1,
+      "share_pct": 0.06702412868632708
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN030 \u2192 VP09",
+      "passenger_trips": 312,
+      "share_pct": 22.127659574468087
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN062 \u2192 CAN084",
+      "passenger_trips": 309,
+      "share_pct": 21.914893617021278
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN084 \u2192 CAN062",
+      "passenger_trips": 300,
+      "share_pct": 21.27659574468085
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "VP09 \u2192 CAN030",
+      "passenger_trips": 294,
+      "share_pct": 20.851063829787233
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "VP09 \u2192 CAN074",
+      "passenger_trips": 76,
+      "share_pct": 5.390070921985815
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN074 \u2192 VP09",
+      "passenger_trips": 62,
+      "share_pct": 4.397163120567376
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN050 \u2192 CAN025",
+      "passenger_trips": 14,
+      "share_pct": 0.9929078014184397
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN025 \u2192 CAN050",
+      "passenger_trips": 11,
+      "share_pct": 0.7801418439716312
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN084 \u2192 CAN030",
+      "passenger_trips": 5,
+      "share_pct": 0.3546099290780142
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN062 \u2192 CAN015",
+      "passenger_trips": 5,
+      "share_pct": 0.3546099290780142
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN030 \u2192 CAN084",
+      "passenger_trips": 4,
+      "share_pct": 0.28368794326241137
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN015 \u2192 CAN062",
+      "passenger_trips": 4,
+      "share_pct": 0.28368794326241137
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN030 \u2192 CAN074",
+      "passenger_trips": 3,
+      "share_pct": 0.2127659574468085
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "VP09 \u2192 CAN084",
+      "passenger_trips": 2,
+      "share_pct": 0.14184397163120568
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN084 \u2192 VP09",
+      "passenger_trips": 2,
+      "share_pct": 0.14184397163120568
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN096 \u2192 CAN074",
+      "passenger_trips": 2,
+      "share_pct": 0.14184397163120568
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN030 \u2192 CAN062",
+      "passenger_trips": 1,
+      "share_pct": 0.07092198581560284
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN021 \u2192 CAN050",
+      "passenger_trips": 1,
+      "share_pct": 0.07092198581560284
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN074 \u2192 CAN096",
+      "passenger_trips": 1,
+      "share_pct": 0.07092198581560284
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN025 \u2192 CAN074",
+      "passenger_trips": 1,
+      "share_pct": 0.07092198581560284
+    },
+    {
+      "method": "one-vp-k10",
+      "corridor": "CAN074 \u2192 CAN030",
+      "passenger_trips": 1,
+      "share_pct": 0.07092198581560284
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN062 \u2192 CAN084",
+      "passenger_trips": 340,
+      "share_pct": 24.963289280469898
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN084 \u2192 CAN062",
+      "passenger_trips": 327,
+      "share_pct": 24.008810572687224
+    },
+    {
+      "method": "adaptive",
+      "corridor": "VP09 \u2192 CAN030",
+      "passenger_trips": 282,
+      "share_pct": 20.704845814977972
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN030 \u2192 VP09",
+      "passenger_trips": 279,
+      "share_pct": 20.484581497797357
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN081 \u2192 CAN050",
+      "passenger_trips": 29,
+      "share_pct": 2.129221732745962
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN050 \u2192 CAN081",
+      "passenger_trips": 24,
+      "share_pct": 1.7621145374449338
+    },
+    {
+      "method": "adaptive",
+      "corridor": "VP09 \u2192 CAN093",
+      "passenger_trips": 19,
+      "share_pct": 1.395007342143906
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN093 \u2192 VP09",
+      "passenger_trips": 15,
+      "share_pct": 1.1013215859030836
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN042 \u2192 CAN084",
+      "passenger_trips": 14,
+      "share_pct": 1.0279001468428781
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN084 \u2192 CAN042",
+      "passenger_trips": 6,
+      "share_pct": 0.44052863436123346
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN030 \u2192 CAN084",
+      "passenger_trips": 5,
+      "share_pct": 0.3671071953010279
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN084 \u2192 CAN030",
+      "passenger_trips": 4,
+      "share_pct": 0.2936857562408223
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN084 \u2192 VP09",
+      "passenger_trips": 4,
+      "share_pct": 0.2936857562408223
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN042 \u2192 CAN093",
+      "passenger_trips": 3,
+      "share_pct": 0.22026431718061673
+    },
+    {
+      "method": "adaptive",
+      "corridor": "VP09 \u2192 CAN084",
+      "passenger_trips": 2,
+      "share_pct": 0.14684287812041116
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN093 \u2192 CAN042",
+      "passenger_trips": 2,
+      "share_pct": 0.14684287812041116
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN015 \u2192 CAN062",
+      "passenger_trips": 2,
+      "share_pct": 0.14684287812041116
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN042 \u2192 VP09",
+      "passenger_trips": 2,
+      "share_pct": 0.14684287812041116
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN030 \u2192 CAN062",
+      "passenger_trips": 1,
+      "share_pct": 0.07342143906020558
+    },
+    {
+      "method": "adaptive",
+      "corridor": "VP09 \u2192 CAN042",
+      "passenger_trips": 1,
+      "share_pct": 0.07342143906020558
+    },
+    {
+      "method": "adaptive",
+      "corridor": "CAN062 \u2192 CAN015",
+      "passenger_trips": 1,
+      "share_pct": 0.07342143906020558
+    }
+  ],
+  "hours": [
+    {
+      "method": "global",
+      "hour": 0,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "global",
+      "hour": 1,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "global",
+      "hour": 2,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "global",
+      "hour": 3,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "global",
+      "hour": 4,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "global",
+      "hour": 5,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "global",
+      "hour": 6,
+      "air_legs": 16,
+      "mean_wait_min": 8.6375
+    },
+    {
+      "method": "global",
+      "hour": 7,
+      "air_legs": 83,
+      "mean_wait_min": 3.9281124497991966
+    },
+    {
+      "method": "global",
+      "hour": 8,
+      "air_legs": 153,
+      "mean_wait_min": 3.9761437908496733
+    },
+    {
+      "method": "global",
+      "hour": 9,
+      "air_legs": 144,
+      "mean_wait_min": 3.921643518518519
+    },
+    {
+      "method": "global",
+      "hour": 10,
+      "air_legs": 147,
+      "mean_wait_min": 5.889909297052154
+    },
+    {
+      "method": "global",
+      "hour": 11,
+      "air_legs": 151,
+      "mean_wait_min": 4.288189845474614
+    },
+    {
+      "method": "global",
+      "hour": 12,
+      "air_legs": 161,
+      "mean_wait_min": 4.496687370600414
+    },
+    {
+      "method": "global",
+      "hour": 13,
+      "air_legs": 154,
+      "mean_wait_min": 4.140692640692641
+    },
+    {
+      "method": "global",
+      "hour": 14,
+      "air_legs": 200,
+      "mean_wait_min": 5.32825
+    },
+    {
+      "method": "global",
+      "hour": 15,
+      "air_legs": 132,
+      "mean_wait_min": 4.4147727272727275
+    },
+    {
+      "method": "global",
+      "hour": 16,
+      "air_legs": 77,
+      "mean_wait_min": 3.5683982683982682
+    },
+    {
+      "method": "global",
+      "hour": 17,
+      "air_legs": 57,
+      "mean_wait_min": 3.8002923976608187
+    },
+    {
+      "method": "global",
+      "hour": 18,
+      "air_legs": 27,
+      "mean_wait_min": 2.9253086419753087
+    },
+    {
+      "method": "global",
+      "hour": 19,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "global",
+      "hour": 20,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "global",
+      "hour": 21,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "global",
+      "hour": 22,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "global",
+      "hour": 23,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 0,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 1,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 2,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 3,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 4,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 5,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 6,
+      "air_legs": 12,
+      "mean_wait_min": 11.369444444444445
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 7,
+      "air_legs": 90,
+      "mean_wait_min": 4.399444444444445
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 8,
+      "air_legs": 145,
+      "mean_wait_min": 4.2332183908045975
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 9,
+      "air_legs": 153,
+      "mean_wait_min": 5.188453159041394
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 10,
+      "air_legs": 144,
+      "mean_wait_min": 5.014467592592593
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 11,
+      "air_legs": 126,
+      "mean_wait_min": 5.147619047619048
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 12,
+      "air_legs": 159,
+      "mean_wait_min": 5.891299790356394
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 13,
+      "air_legs": 163,
+      "mean_wait_min": 4.71441717791411
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 14,
+      "air_legs": 191,
+      "mean_wait_min": 5.902530541012216
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 15,
+      "air_legs": 146,
+      "mean_wait_min": 4.551940639269406
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 16,
+      "air_legs": 76,
+      "mean_wait_min": 3.9212719298245613
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 17,
+      "air_legs": 59,
+      "mean_wait_min": 2.4522598870056496
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 18,
+      "air_legs": 28,
+      "mean_wait_min": 2.0863095238095237
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 19,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 20,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 21,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 22,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "all-vp-k10",
+      "hour": 23,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 0,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 1,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 2,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 3,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 4,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 5,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 6,
+      "air_legs": 12,
+      "mean_wait_min": 11.029166666666667
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 7,
+      "air_legs": 75,
+      "mean_wait_min": 3.664222222222222
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 8,
+      "air_legs": 149,
+      "mean_wait_min": 5.693288590604027
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 9,
+      "air_legs": 151,
+      "mean_wait_min": 7.26953642384106
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 10,
+      "air_legs": 126,
+      "mean_wait_min": 5.355291005291005
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 11,
+      "air_legs": 135,
+      "mean_wait_min": 5.267777777777778
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 12,
+      "air_legs": 143,
+      "mean_wait_min": 5.55
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 13,
+      "air_legs": 137,
+      "mean_wait_min": 4.863868613138686
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 14,
+      "air_legs": 184,
+      "mean_wait_min": 5.870742753623189
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 15,
+      "air_legs": 145,
+      "mean_wait_min": 5.867471264367816
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 16,
+      "air_legs": 70,
+      "mean_wait_min": 5.163095238095238
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 17,
+      "air_legs": 49,
+      "mean_wait_min": 4.437414965986394
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 18,
+      "air_legs": 34,
+      "mean_wait_min": 3.7931372549019606
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 19,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 20,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 21,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 22,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "one-vp-k10",
+      "hour": 23,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "adaptive",
+      "hour": 0,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "adaptive",
+      "hour": 1,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "adaptive",
+      "hour": 2,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "adaptive",
+      "hour": 3,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "adaptive",
+      "hour": 4,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "adaptive",
+      "hour": 5,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "adaptive",
+      "hour": 6,
+      "air_legs": 7,
+      "mean_wait_min": 10.042857142857143
+    },
+    {
+      "method": "adaptive",
+      "hour": 7,
+      "air_legs": 92,
+      "mean_wait_min": 4.191123188405797
+    },
+    {
+      "method": "adaptive",
+      "hour": 8,
+      "air_legs": 139,
+      "mean_wait_min": 5.152877697841727
+    },
+    {
+      "method": "adaptive",
+      "hour": 9,
+      "air_legs": 141,
+      "mean_wait_min": 4.166548463356974
+    },
+    {
+      "method": "adaptive",
+      "hour": 10,
+      "air_legs": 137,
+      "mean_wait_min": 5.415815085158151
+    },
+    {
+      "method": "adaptive",
+      "hour": 11,
+      "air_legs": 122,
+      "mean_wait_min": 5.366939890710382
+    },
+    {
+      "method": "adaptive",
+      "hour": 12,
+      "air_legs": 135,
+      "mean_wait_min": 4.877283950617284
+    },
+    {
+      "method": "adaptive",
+      "hour": 13,
+      "air_legs": 139,
+      "mean_wait_min": 5.774940047961631
+    },
+    {
+      "method": "adaptive",
+      "hour": 14,
+      "air_legs": 173,
+      "mean_wait_min": 6.341714836223507
+    },
+    {
+      "method": "adaptive",
+      "hour": 15,
+      "air_legs": 133,
+      "mean_wait_min": 5.40438596491228
+    },
+    {
+      "method": "adaptive",
+      "hour": 16,
+      "air_legs": 63,
+      "mean_wait_min": 4.465608465608466
+    },
+    {
+      "method": "adaptive",
+      "hour": 17,
+      "air_legs": 45,
+      "mean_wait_min": 3.8837037037037034
+    },
+    {
+      "method": "adaptive",
+      "hour": 18,
+      "air_legs": 36,
+      "mean_wait_min": 3.2731481481481484
+    },
+    {
+      "method": "adaptive",
+      "hour": 19,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "adaptive",
+      "hour": 20,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "adaptive",
+      "hour": 21,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "adaptive",
+      "hour": 22,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    },
+    {
+      "method": "adaptive",
+      "hour": 23,
+      "air_legs": 0,
+      "mean_wait_min": NaN
+    }
+  ],
+  "occupancy": [
+    {
+      "method": "global",
+      "passengers": 0,
+      "distance_km": 32.5427,
+      "distance_share_pct": 0.6406675587953943
+    },
+    {
+      "method": "global",
+      "passengers": 1,
+      "distance_km": 2318.0278,
+      "distance_share_pct": 45.63497226246925
+    },
+    {
+      "method": "global",
+      "passengers": 2,
+      "distance_km": 1236.21929,
+      "distance_share_pct": 24.33742727739479
+    },
+    {
+      "method": "global",
+      "passengers": 3,
+      "distance_km": 520.96435,
+      "distance_share_pct": 10.256215935799098
+    },
+    {
+      "method": "global",
+      "passengers": 4,
+      "distance_km": 971.74451,
+      "distance_share_pct": 19.130716965541474
+    },
+    {
+      "method": "all-vp-k10",
+      "passengers": 0,
+      "distance_km": 50.76896,
+      "distance_share_pct": 1.0958727877383891
+    },
+    {
+      "method": "all-vp-k10",
+      "passengers": 1,
+      "distance_km": 2150.2826800000003,
+      "distance_share_pct": 46.414901446812685
+    },
+    {
+      "method": "all-vp-k10",
+      "passengers": 2,
+      "distance_km": 748.75427,
+      "distance_share_pct": 16.162226470582073
+    },
+    {
+      "method": "all-vp-k10",
+      "passengers": 3,
+      "distance_km": 464.74446,
+      "distance_share_pct": 10.031736064047251
+    },
+    {
+      "method": "all-vp-k10",
+      "passengers": 4,
+      "distance_km": 1218.19173,
+      "distance_share_pct": 26.2952632308196
+    },
+    {
+      "method": "one-vp-k10",
+      "passengers": 0,
+      "distance_km": 20.613709999999998,
+      "distance_share_pct": 0.4669456804895201
+    },
+    {
+      "method": "one-vp-k10",
+      "passengers": 1,
+      "distance_km": 2025.42199,
+      "distance_share_pct": 45.880244235462136
+    },
+    {
+      "method": "one-vp-k10",
+      "passengers": 2,
+      "distance_km": 567.26003,
+      "distance_share_pct": 12.849682115585
+    },
+    {
+      "method": "one-vp-k10",
+      "passengers": 3,
+      "distance_km": 485.22629,
+      "distance_share_pct": 10.991438230937336
+    },
+    {
+      "method": "one-vp-k10",
+      "passengers": 4,
+      "distance_km": 1316.0621299999998,
+      "distance_share_pct": 29.811689737526013
+    },
+    {
+      "method": "adaptive",
+      "passengers": 0,
+      "distance_km": 45.37411,
+      "distance_share_pct": 1.0652775591160584
+    },
+    {
+      "method": "adaptive",
+      "passengers": 1,
+      "distance_km": 1971.81729,
+      "distance_share_pct": 46.29363991302619
+    },
+    {
+      "method": "adaptive",
+      "passengers": 2,
+      "distance_km": 561.6637900000001,
+      "distance_share_pct": 13.186546937341017
+    },
+    {
+      "method": "adaptive",
+      "passengers": 3,
+      "distance_km": 406.07708,
+      "distance_share_pct": 9.533736322219353
+    },
+    {
+      "method": "adaptive",
+      "passengers": 4,
+      "distance_km": 1274.43747,
+      "distance_share_pct": 29.92079926829738
+    }
+  ],
+  "fare_distribution": [
+    {
+      "method": "global",
+      "cumulative_share_pct": 0,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 2,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 4,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 6,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 8,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 10,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 12,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 14,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 16,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 18,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 20,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 22,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 24,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 25,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 26,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 28,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 30,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 32,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 34,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 36,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 38,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 40,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 42,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 44,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 46,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 48,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 50,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 52,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 54,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 56,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 58,
+      "fare_usd": 7.974677881173944
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 60,
+      "fare_usd": 8.076582756700867
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 62,
+      "fare_usd": 8.076582756700867
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 64,
+      "fare_usd": 8.076582756700867
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 66,
+      "fare_usd": 8.076582756700867
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 68,
+      "fare_usd": 8.076582756700867
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 70,
+      "fare_usd": 8.076582756700867
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 72,
+      "fare_usd": 8.076582756700867
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 74,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 75,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 76,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 78,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 80,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 82,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 84,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 86,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 88,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 90,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 92,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 94,
+      "fare_usd": 13.462628251014078
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 95,
+      "fare_usd": 13.462628251014078
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 96,
+      "fare_usd": 13.621649566531456
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 98,
+      "fare_usd": 27.358749900580634
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 100,
+      "fare_usd": 89.68871788753678
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 0,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 2,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 4,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 6,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 8,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 10,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 12,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 14,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 16,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 18,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 20,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 22,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 24,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 25,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 26,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 28,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 30,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 32,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 34,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 36,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 38,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 40,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 42,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 44,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 46,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 48,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 50,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 52,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 54,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 56,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 58,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 60,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 62,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 64,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 66,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 68,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 70,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 72,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 74,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 75,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 76,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 78,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 80,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 82,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 84,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 86,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 88,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 90,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 92,
+      "fare_usd": 8.540125666109917
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 94,
+      "fare_usd": 13.462628251014078
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 95,
+      "fare_usd": 13.462628251014078
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 96,
+      "fare_usd": 13.62045653384236
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 98,
+      "fare_usd": 24.730573451045892
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 100,
+      "fare_usd": 78.9191123836793
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 0,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 2,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 4,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 6,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 8,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 10,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 12,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 14,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 16,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 18,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 20,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 22,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 24,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 25,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 26,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 28,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 30,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 32,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 34,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 36,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 38,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 40,
+      "fare_usd": 6.514455579416209
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 42,
+      "fare_usd": 6.514455579416209
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 44,
+      "fare_usd": 6.514455579416209
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 46,
+      "fare_usd": 6.514455579416209
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 48,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 50,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 52,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 54,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 56,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 58,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 60,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 62,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 64,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 66,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 68,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 70,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 72,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 74,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 75,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 76,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 78,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 80,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 82,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 84,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 86,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 88,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 90,
+      "fare_usd": 13.62045653384236
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 92,
+      "fare_usd": 15.595174182772608
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 94,
+      "fare_usd": 17.56864908931838
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 95,
+      "fare_usd": 19.868840968742518
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 96,
+      "fare_usd": 24.67713552851348
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 98,
+      "fare_usd": 36.34275829157719
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 100,
+      "fare_usd": 74.37813171080887
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 0,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 2,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 4,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 6,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 8,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 10,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 12,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 14,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 16,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 18,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 20,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 22,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 24,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 25,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 26,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 28,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 30,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 32,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 34,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 36,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 38,
+      "fare_usd": 4.539737930485962
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 40,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 42,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 44,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 46,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 48,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 50,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 52,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 54,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 56,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 58,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 60,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 62,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 64,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 66,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 68,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 70,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 72,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 74,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 75,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 76,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 78,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 80,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 82,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 84,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 86,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 88,
+      "fare_usd": 8.538882923725444
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 90,
+      "fare_usd": 13.462628251014078
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 92,
+      "fare_usd": 13.462628251014078
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 94,
+      "fare_usd": 18.35654776107532
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 95,
+      "fare_usd": 18.35654776107532
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 96,
+      "fare_usd": 25.921120655372622
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 98,
+      "fare_usd": 31.8872037302155
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 100,
+      "fare_usd": 81.69664161298019
+    }
+  ],
+  "wait_time_distribution": [
+    {
+      "method": "global",
+      "cumulative_share_pct": 0,
+      "wait_minutes": 0.016666666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 2,
+      "wait_minutes": 0.2
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 4,
+      "wait_minutes": 0.4
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 6,
+      "wait_minutes": 0.6166666666666667
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 8,
+      "wait_minutes": 0.8513333333333333
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 10,
+      "wait_minutes": 1.0166666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 12,
+      "wait_minutes": 1.2166666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 14,
+      "wait_minutes": 1.3690000000000002
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 16,
+      "wait_minutes": 1.55
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 18,
+      "wait_minutes": 1.7363333333333335
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 20,
+      "wait_minutes": 1.9166666666666667
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 22,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 24,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 25,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 26,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 28,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 30,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 32,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 34,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 36,
+      "wait_minutes": 2.183333333333333
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 38,
+      "wait_minutes": 2.35
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 40,
+      "wait_minutes": 2.5566666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 42,
+      "wait_minutes": 2.7666666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 44,
+      "wait_minutes": 2.95
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 46,
+      "wait_minutes": 3.183333333333333
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 48,
+      "wait_minutes": 3.3913333333333338
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 50,
+      "wait_minutes": 3.566666666666667
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 52,
+      "wait_minutes": 3.7666666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 54,
+      "wait_minutes": 4.009000000000001
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 56,
+      "wait_minutes": 4.209333333333334
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 58,
+      "wait_minutes": 4.5
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 60,
+      "wait_minutes": 4.7
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 62,
+      "wait_minutes": 4.933333333333334
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 64,
+      "wait_minutes": 5.177333333333333
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 66,
+      "wait_minutes": 5.416333333333338
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 68,
+      "wait_minutes": 5.716666666666667
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 70,
+      "wait_minutes": 5.95
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 72,
+      "wait_minutes": 6.107333333333334
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 74,
+      "wait_minutes": 6.366666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 75,
+      "wait_minutes": 6.466666666666667
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 76,
+      "wait_minutes": 6.566666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 78,
+      "wait_minutes": 6.922333333333333
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 80,
+      "wait_minutes": 7.183333333333334
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 82,
+      "wait_minutes": 7.430333333333333
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 84,
+      "wait_minutes": 7.747333333333332
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 86,
+      "wait_minutes": 8.114333333333331
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 88,
+      "wait_minutes": 8.51466666666667
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 90,
+      "wait_minutes": 9.196666666666669
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 92,
+      "wait_minutes": 9.932000000000002
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 94,
+      "wait_minutes": 11.115666666666664
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 95,
+      "wait_minutes": 11.761666666666672
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 96,
+      "wait_minutes": 12.064000000000002
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 98,
+      "wait_minutes": 13.349666666666666
+    },
+    {
+      "method": "global",
+      "cumulative_share_pct": 100,
+      "wait_minutes": 15.033333333333333
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 0,
+      "wait_minutes": 0.016666666666666666
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 2,
+      "wait_minutes": 0.2
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 4,
+      "wait_minutes": 0.3333333333333333
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 6,
+      "wait_minutes": 0.5
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 8,
+      "wait_minutes": 0.75
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 10,
+      "wait_minutes": 0.95
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 12,
+      "wait_minutes": 1.2166666666666666
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 14,
+      "wait_minutes": 1.3666666666666667
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 16,
+      "wait_minutes": 1.5333333333333334
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 18,
+      "wait_minutes": 1.7229999999999999
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 20,
+      "wait_minutes": 1.9166666666666667
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 22,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 24,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 25,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 26,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 28,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 30,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 32,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 34,
+      "wait_minutes": 2.049000000000001
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 36,
+      "wait_minutes": 2.262666666666666
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 38,
+      "wait_minutes": 2.5263333333333335
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 40,
+      "wait_minutes": 2.8133333333333326
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 42,
+      "wait_minutes": 3.1333333333333337
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 44,
+      "wait_minutes": 3.400666666666666
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 46,
+      "wait_minutes": 3.633333333333333
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 48,
+      "wait_minutes": 3.8
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 50,
+      "wait_minutes": 4.0
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 52,
+      "wait_minutes": 4.25
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 54,
+      "wait_minutes": 4.466666666666667
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 56,
+      "wait_minutes": 4.716666666666667
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 58,
+      "wait_minutes": 4.916666666666667
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 60,
+      "wait_minutes": 5.166666666666667
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 62,
+      "wait_minutes": 5.433333333333334
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 64,
+      "wait_minutes": 5.666666666666667
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 66,
+      "wait_minutes": 5.934333333333335
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 68,
+      "wait_minutes": 6.231333333333335
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 70,
+      "wait_minutes": 6.495000000000001
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 72,
+      "wait_minutes": 6.734
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 74,
+      "wait_minutes": 7.083333333333333
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 75,
+      "wait_minutes": 7.316666666666666
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 76,
+      "wait_minutes": 7.466666666666667
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 78,
+      "wait_minutes": 7.733333333333333
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 80,
+      "wait_minutes": 8.233333333333333
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 82,
+      "wait_minutes": 8.510333333333332
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 84,
+      "wait_minutes": 8.85
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 86,
+      "wait_minutes": 9.5
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 88,
+      "wait_minutes": 10.0
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 90,
+      "wait_minutes": 10.578333333333338
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 92,
+      "wait_minutes": 11.212
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 94,
+      "wait_minutes": 11.892333333333333
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 95,
+      "wait_minutes": 12.181666666666668
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 96,
+      "wait_minutes": 12.605999999999998
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 98,
+      "wait_minutes": 13.589333333333336
+    },
+    {
+      "method": "all-vp-k10",
+      "cumulative_share_pct": 100,
+      "wait_minutes": 15.033333333333333
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 0,
+      "wait_minutes": 0.016666666666666666
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 2,
+      "wait_minutes": 0.26666666666666666
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 4,
+      "wait_minutes": 0.47866666666666663
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 6,
+      "wait_minutes": 0.7589999999999999
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 8,
+      "wait_minutes": 0.9453333333333334
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 10,
+      "wait_minutes": 1.1833333333333333
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 12,
+      "wait_minutes": 1.3679999999999999
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 14,
+      "wait_minutes": 1.6
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 16,
+      "wait_minutes": 1.8239999999999998
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 18,
+      "wait_minutes": 2.0103333333333335
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 20,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 22,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 24,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 25,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 26,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 28,
+      "wait_minutes": 2.242000000000001
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 30,
+      "wait_minutes": 2.45
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 32,
+      "wait_minutes": 2.716666666666667
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 34,
+      "wait_minutes": 2.966666666666667
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 36,
+      "wait_minutes": 3.2206666666666672
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 38,
+      "wait_minutes": 3.540333333333333
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 40,
+      "wait_minutes": 3.8600000000000003
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 42,
+      "wait_minutes": 4.15
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 44,
+      "wait_minutes": 4.349333333333334
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 46,
+      "wait_minutes": 4.569
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 48,
+      "wait_minutes": 4.8
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 50,
+      "wait_minutes": 4.975
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 52,
+      "wait_minutes": 5.216666666666667
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 54,
+      "wait_minutes": 5.397666666666667
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 56,
+      "wait_minutes": 5.584666666666669
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 58,
+      "wait_minutes": 5.903666666666666
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 60,
+      "wait_minutes": 6.113333333333333
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 62,
+      "wait_minutes": 6.3596666666666675
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 64,
+      "wait_minutes": 6.616666666666665
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 66,
+      "wait_minutes": 6.95
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 68,
+      "wait_minutes": 7.185333333333336
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 70,
+      "wait_minutes": 7.416666666666667
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 72,
+      "wait_minutes": 7.874666666666667
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 74,
+      "wait_minutes": 8.216666666666667
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 75,
+      "wait_minutes": 8.383333333333333
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 76,
+      "wait_minutes": 8.547333333333333
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 78,
+      "wait_minutes": 8.817
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 80,
+      "wait_minutes": 9.24
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 82,
+      "wait_minutes": 9.595999999999997
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 84,
+      "wait_minutes": 9.868666666666664
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 86,
+      "wait_minutes": 10.383333333333333
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 88,
+      "wait_minutes": 10.883333333333333
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 90,
+      "wait_minutes": 11.366666666666667
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 92,
+      "wait_minutes": 11.988
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 94,
+      "wait_minutes": 12.366666666666667
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 95,
+      "wait_minutes": 12.594166666666665
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 96,
+      "wait_minutes": 12.90466666666666
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 98,
+      "wait_minutes": 13.478999999999992
+    },
+    {
+      "method": "one-vp-k10",
+      "cumulative_share_pct": 100,
+      "wait_minutes": 15.016666666666667
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 0,
+      "wait_minutes": 0.016666666666666666
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 2,
+      "wait_minutes": 0.21666666666666667
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 4,
+      "wait_minutes": 0.38333333333333336
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 6,
+      "wait_minutes": 0.5833333333333334
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 8,
+      "wait_minutes": 0.8479999999999999
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 10,
+      "wait_minutes": 1.0533333333333332
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 12,
+      "wait_minutes": 1.2666666666666666
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 14,
+      "wait_minutes": 1.4
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 16,
+      "wait_minutes": 1.5833333333333333
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 18,
+      "wait_minutes": 1.8166666666666667
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 20,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 22,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 24,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 25,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 26,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 28,
+      "wait_minutes": 2.0166666666666666
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 30,
+      "wait_minutes": 2.021666666666667
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 32,
+      "wait_minutes": 2.2333333333333334
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 34,
+      "wait_minutes": 2.5370000000000004
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 36,
+      "wait_minutes": 2.8
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 38,
+      "wait_minutes": 3.083333333333334
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 40,
+      "wait_minutes": 3.373333333333333
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 42,
+      "wait_minutes": 3.6000000000000005
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 44,
+      "wait_minutes": 3.8586666666666685
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 46,
+      "wait_minutes": 4.118666666666669
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 48,
+      "wait_minutes": 4.333333333333333
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 50,
+      "wait_minutes": 4.483333333333333
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 52,
+      "wait_minutes": 4.7906666666666675
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 54,
+      "wait_minutes": 5.032333333333335
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 56,
+      "wait_minutes": 5.2360000000000015
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 58,
+      "wait_minutes": 5.462666666666667
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 60,
+      "wait_minutes": 5.710000000000001
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 62,
+      "wait_minutes": 6.044000000000001
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 64,
+      "wait_minutes": 6.266666666666667
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 66,
+      "wait_minutes": 6.450000000000001
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 68,
+      "wait_minutes": 6.624666666666667
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 70,
+      "wait_minutes": 6.8
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 72,
+      "wait_minutes": 7.05
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 74,
+      "wait_minutes": 7.35
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 75,
+      "wait_minutes": 7.4624999999999995
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 76,
+      "wait_minutes": 7.601333333333328
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 78,
+      "wait_minutes": 7.95
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 80,
+      "wait_minutes": 8.283333333333333
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 82,
+      "wait_minutes": 8.583333333333334
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 84,
+      "wait_minutes": 9.054
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 86,
+      "wait_minutes": 9.45
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 88,
+      "wait_minutes": 10.166666666666666
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 90,
+      "wait_minutes": 10.7
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 92,
+      "wait_minutes": 11.28933333333334
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 94,
+      "wait_minutes": 11.92233333333333
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 95,
+      "wait_minutes": 12.266666666666667
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 96,
+      "wait_minutes": 12.626
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 98,
+      "wait_minutes": 13.679666666666666
+    },
+    {
+      "method": "adaptive",
+      "cumulative_share_pct": 100,
+      "wait_minutes": 14.983333333333333
+    }
+  ],
+  "aam_share_by_time_window": [
+    {
+      "method": "global",
+      "scope": "All trips",
+      "aam_trips": 1502,
+      "total_trips": 71552,
+      "aam_share_pct": 2.0991726296958855
+    },
+    {
+      "method": "global",
+      "scope": "07:00\u201319:00",
+      "aam_trips": 1468,
+      "total_trips": 47435,
+      "aam_share_pct": 3.0947612522399073
+    },
+    {
+      "method": "all-vp-k10",
+      "scope": "All trips",
+      "aam_trips": 1492,
+      "total_trips": 71559,
+      "aam_share_pct": 2.0849928031414637
+    },
+    {
+      "method": "all-vp-k10",
+      "scope": "07:00\u201319:00",
+      "aam_trips": 1461,
+      "total_trips": 47430,
+      "aam_share_pct": 3.080328905755851
+    },
+    {
+      "method": "one-vp-k10",
+      "scope": "All trips",
+      "aam_trips": 1410,
+      "total_trips": 71555,
+      "aam_share_pct": 1.9705121934176508
+    },
+    {
+      "method": "one-vp-k10",
+      "scope": "07:00\u201319:00",
+      "aam_trips": 1380,
+      "total_trips": 47376,
+      "aam_share_pct": 2.912867274569402
+    },
+    {
+      "method": "adaptive",
+      "scope": "All trips",
+      "aam_trips": 1362,
+      "total_trips": 71550,
+      "aam_share_pct": 1.9035639412997905
+    },
+    {
+      "method": "adaptive",
+      "scope": "07:00\u201319:00",
+      "aam_trips": 1333,
+      "total_trips": 47408,
+      "aam_share_pct": 2.8117617279784004
+    }
+  ],
+  "aam_trip_purposes": [
+    {
+      "method": "global",
+      "purpose": "home",
+      "aam_trips": 715,
+      "share_pct": 47.603195739014645
+    },
+    {
+      "method": "global",
+      "purpose": "shop",
+      "aam_trips": 152,
+      "share_pct": 10.119840213049267
+    },
+    {
+      "method": "global",
+      "purpose": "HHmaintenance",
+      "aam_trips": 100,
+      "share_pct": 6.657789613848203
+    },
+    {
+      "method": "global",
+      "purpose": "discretionary",
+      "aam_trips": 95,
+      "share_pct": 6.324900133155793
+    },
+    {
+      "method": "global",
+      "purpose": "work",
+      "aam_trips": 92,
+      "share_pct": 6.125166444740346
+    },
+    {
+      "method": "global",
+      "purpose": "business",
+      "aam_trips": 70,
+      "share_pct": 4.660452729693741
+    },
+    {
+      "method": "global",
+      "purpose": "non-schoolescort",
+      "aam_trips": 43,
+      "share_pct": 2.862849533954727
+    },
+    {
+      "method": "global",
+      "purpose": "visiting",
+      "aam_trips": 37,
+      "share_pct": 2.463382157123835
+    },
+    {
+      "method": "global",
+      "purpose": "maintenance",
+      "aam_trips": 35,
+      "share_pct": 2.3302263648468706
+    },
+    {
+      "method": "global",
+      "purpose": "personalmaintenance",
+      "aam_trips": 34,
+      "share_pct": 2.263648468708389
+    },
+    {
+      "method": "global",
+      "purpose": "eatout",
+      "aam_trips": 32,
+      "share_pct": 2.130492676431425
+    },
+    {
+      "method": "global",
+      "purpose": "university",
+      "aam_trips": 31,
+      "share_pct": 2.0639147802929427
+    },
+    {
+      "method": "global",
+      "purpose": "schoolridesharing",
+      "aam_trips": 24,
+      "share_pct": 1.5978695073235685
+    },
+    {
+      "method": "global",
+      "purpose": "eatoutdinner",
+      "aam_trips": 17,
+      "share_pct": 1.1318242343541944
+    },
+    {
+      "method": "global",
+      "purpose": "eatoutlunch",
+      "aam_trips": 13,
+      "share_pct": 0.8655126498002663
+    },
+    {
+      "method": "global",
+      "purpose": "schoolpureescort",
+      "aam_trips": 8,
+      "share_pct": 0.5326231691078562
+    },
+    {
+      "method": "global",
+      "purpose": "eatoutbreakfast",
+      "aam_trips": 2,
+      "share_pct": 0.13315579227696406
+    },
+    {
+      "method": "global",
+      "purpose": "school",
+      "aam_trips": 2,
+      "share_pct": 0.13315579227696406
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "home",
+      "aam_trips": 729,
+      "share_pct": 48.86058981233244
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "shop",
+      "aam_trips": 158,
+      "share_pct": 10.589812332439678
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "work",
+      "aam_trips": 96,
+      "share_pct": 6.434316353887399
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "discretionary",
+      "aam_trips": 90,
+      "share_pct": 6.032171581769437
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "HHmaintenance",
+      "aam_trips": 87,
+      "share_pct": 5.831099195710456
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "business",
+      "aam_trips": 78,
+      "share_pct": 5.227882037533512
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "non-schoolescort",
+      "aam_trips": 44,
+      "share_pct": 2.9490616621983916
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "university",
+      "aam_trips": 35,
+      "share_pct": 2.3458445040214477
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "maintenance",
+      "aam_trips": 32,
+      "share_pct": 2.1447721179624666
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "eatout",
+      "aam_trips": 29,
+      "share_pct": 1.9436997319034852
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "visiting",
+      "aam_trips": 28,
+      "share_pct": 1.876675603217158
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "personalmaintenance",
+      "aam_trips": 27,
+      "share_pct": 1.8096514745308312
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "schoolridesharing",
+      "aam_trips": 22,
+      "share_pct": 1.4745308310991958
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "eatoutlunch",
+      "aam_trips": 15,
+      "share_pct": 1.0053619302949062
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "eatoutdinner",
+      "aam_trips": 13,
+      "share_pct": 0.871313672922252
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "schoolpureescort",
+      "aam_trips": 5,
+      "share_pct": 0.3351206434316354
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "school",
+      "aam_trips": 2,
+      "share_pct": 0.13404825737265416
+    },
+    {
+      "method": "all-vp-k10",
+      "purpose": "eatoutbreakfast",
+      "aam_trips": 2,
+      "share_pct": 0.13404825737265416
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "home",
+      "aam_trips": 686,
+      "share_pct": 48.652482269503544
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "shop",
+      "aam_trips": 146,
+      "share_pct": 10.354609929078014
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "work",
+      "aam_trips": 94,
+      "share_pct": 6.666666666666667
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "HHmaintenance",
+      "aam_trips": 86,
+      "share_pct": 6.099290780141844
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "discretionary",
+      "aam_trips": 74,
+      "share_pct": 5.24822695035461
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "business",
+      "aam_trips": 70,
+      "share_pct": 4.964539007092198
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "non-schoolescort",
+      "aam_trips": 40,
+      "share_pct": 2.8368794326241136
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "visiting",
+      "aam_trips": 39,
+      "share_pct": 2.765957446808511
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "university",
+      "aam_trips": 34,
+      "share_pct": 2.4113475177304964
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "maintenance",
+      "aam_trips": 32,
+      "share_pct": 2.269503546099291
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "personalmaintenance",
+      "aam_trips": 26,
+      "share_pct": 1.8439716312056738
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "eatout",
+      "aam_trips": 24,
+      "share_pct": 1.702127659574468
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "schoolridesharing",
+      "aam_trips": 18,
+      "share_pct": 1.2765957446808511
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "eatoutlunch",
+      "aam_trips": 17,
+      "share_pct": 1.2056737588652482
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "eatoutdinner",
+      "aam_trips": 14,
+      "share_pct": 0.9929078014184397
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "schoolpureescort",
+      "aam_trips": 7,
+      "share_pct": 0.49645390070921985
+    },
+    {
+      "method": "one-vp-k10",
+      "purpose": "school",
+      "aam_trips": 3,
+      "share_pct": 0.2127659574468085
+    },
+    {
+      "method": "adaptive",
+      "purpose": "home",
+      "aam_trips": 638,
+      "share_pct": 46.84287812041116
+    },
+    {
+      "method": "adaptive",
+      "purpose": "shop",
+      "aam_trips": 134,
+      "share_pct": 9.838472834067547
+    },
+    {
+      "method": "adaptive",
+      "purpose": "work",
+      "aam_trips": 92,
+      "share_pct": 6.7547723935389135
+    },
+    {
+      "method": "adaptive",
+      "purpose": "discretionary",
+      "aam_trips": 88,
+      "share_pct": 6.461086637298091
+    },
+    {
+      "method": "adaptive",
+      "purpose": "HHmaintenance",
+      "aam_trips": 87,
+      "share_pct": 6.387665198237886
+    },
+    {
+      "method": "adaptive",
+      "purpose": "business",
+      "aam_trips": 78,
+      "share_pct": 5.726872246696035
+    },
+    {
+      "method": "adaptive",
+      "purpose": "visiting",
+      "aam_trips": 40,
+      "share_pct": 2.9368575624082234
+    },
+    {
+      "method": "adaptive",
+      "purpose": "non-schoolescort",
+      "aam_trips": 36,
+      "share_pct": 2.643171806167401
+    },
+    {
+      "method": "adaptive",
+      "purpose": "personalmaintenance",
+      "aam_trips": 33,
+      "share_pct": 2.4229074889867843
+    },
+    {
+      "method": "adaptive",
+      "purpose": "maintenance",
+      "aam_trips": 32,
+      "share_pct": 2.3494860499265786
+    },
+    {
+      "method": "adaptive",
+      "purpose": "university",
+      "aam_trips": 27,
+      "share_pct": 1.9823788546255507
+    },
+    {
+      "method": "adaptive",
+      "purpose": "eatout",
+      "aam_trips": 23,
+      "share_pct": 1.6886930983847284
+    },
+    {
+      "method": "adaptive",
+      "purpose": "schoolridesharing",
+      "aam_trips": 20,
+      "share_pct": 1.4684287812041117
+    },
+    {
+      "method": "adaptive",
+      "purpose": "eatoutdinner",
+      "aam_trips": 16,
+      "share_pct": 1.1747430249632893
+    },
+    {
+      "method": "adaptive",
+      "purpose": "eatoutlunch",
+      "aam_trips": 11,
+      "share_pct": 0.8076358296622613
+    },
+    {
+      "method": "adaptive",
+      "purpose": "schoolpureescort",
+      "aam_trips": 3,
+      "share_pct": 0.22026431718061673
+    },
+    {
+      "method": "adaptive",
+      "purpose": "eatoutbreakfast",
+      "aam_trips": 2,
+      "share_pct": 0.14684287812041116
+    },
+    {
+      "method": "adaptive",
+      "purpose": "school",
+      "aam_trips": 2,
+      "share_pct": 0.14684287812041116
+    }
+  ]
+}

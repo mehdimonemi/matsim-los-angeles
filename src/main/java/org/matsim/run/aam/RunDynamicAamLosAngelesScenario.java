@@ -32,7 +32,7 @@ import org.matsim.run.RunLosAngelesScenario;
 public final class RunDynamicAamLosAngelesScenario {
     public static final long SEED=20260909L;
     public static final String AIR="aam_drt", AAM="aam";
-    public static final double MILE=1609.344, AIR_SPEED=100*MILE/3600, MAX_WAIT=900;
+    public static final double MILE=1609.344, AIR_SPEED=98*AamMissionProfile.KNOTS_TO_METERS_PER_SECOND, MAX_WAIT=900;
     public static final double AAM_BASE_FARE=0, AAM_PER_MILE=2;
     public static final int AIRCRAFT=100;
     public static final double[][] COORDS={
