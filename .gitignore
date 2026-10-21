@@ -30,3 +30,16 @@ output*
 /.codex-pptx-build/
 __pycache__/
 *.py[cod]
+
+# Generated review videos, HPC bundles, and validation run outputs
+/deliverables/**/video/
+/hpc/*.tar.gz
+/hpc/*/lib/
+/validation/aam-demand-review-20261011/
+/validation/aam-exploration-integration/
+/validation/choice-small-case/
+/validation/choice-small-positive/
+/validation/choice-tmp/
+/validation/drt-global-choice-integration-20261010/
+/validation/drt-global-tour-startup-integration-20261011/
+/validation/exploration-tmp/
