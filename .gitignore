@@ -24,3 +24,9 @@ output*
 /.DS_Store
 /run-output/
 /validation/*.log
+
+# Local Codex presentation build outputs and Python bytecode caches
+/.codex-finalizer/
+/.codex-pptx-build/
+__pycache__/
+*.py[cod]
